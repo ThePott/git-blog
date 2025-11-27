@@ -19,3 +19,11 @@ box-shadow: 2px 2px 2px 1px rgb(0 0 0 / 20%);
 - spread-radius: how big the total blur is
     - positive: bigger than box
     - negative: smaller than box
+
+### custom box-shadow syntax
+
+```css
+/* just use value. no need to specify it is for box-shadow */
+--shadow-my-xs: 0px 2px 2px 1px red;
+--shadow-my-xl: 0px 24px 24px 12px red;
+```
