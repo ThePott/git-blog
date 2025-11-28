@@ -12,7 +12,13 @@ Diagnostics:
 
 ## ignore all and run express server
 
-1. try `tsc`
+1. setup port using env
+
+```ts
+const port = process.env.PORT || 3000
+```
+
+2. try `tsc`
 
 ```
 ❯ tsc
@@ -29,14 +35,14 @@ ax', 'module', and 'moduleResolution' settings in TypeScript.
 Found 1 error in src/server.ts:1
 ```
 
-2. fix package json: package json -> target -> module
+3. fix package json: package json -> target -> module
 
 ```
     "type": "commonJS", -> "module"
 ```
 
-3. setup nodemon
-4. fix module error (not lint yet)
+4. install tsx in dev dep and set it up
+5. fix module error (not lint yet)
 
 ```
 Diagnostics:
@@ -54,10 +60,10 @@ Diagnostics:
         // and npm install -D @types/node
 ```
 
-5. fix eslint error
+7. fix eslint error
 
 ```zsh
 npm init @eslint/config@latest
 ```
 
-6. restart lsp and neovim
+8. restart lsp and neovim
