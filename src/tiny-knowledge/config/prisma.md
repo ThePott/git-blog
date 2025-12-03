@@ -19,3 +19,9 @@ prismaClient.User.create(user)
 - 여기에서 User라고 하면 인식 못 함. user라고만 인식됨. 이는 원래 table 이름 `users`와도 다름
 - 그냥 PascalCase -> camelCase
 - 내가 원래 설정한 거랑 다르다면 쓸 필요가 없음
+
+## model 만들 때 주의사항
+
+- `@id @default(autoincrement())` for `PRIMARY KEY SERIES`
+
+## never rename migration folder name
