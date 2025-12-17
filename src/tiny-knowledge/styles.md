@@ -11,6 +11,11 @@ box-shadow:
 box-shadow: 2px 2px 2px 1px rgb(0 0 0 / 20%);
 ```
 
+```css
+/* activate inset mode | <offset-x> | <offset-y> | <blur-radius> | <spread-radius> | <color> */
+box-shadow: inset 0em -1em 1em gold;
+```
+
 ### blur-radius vs spread-radius
 
 - blur-radius: how strong the blur is
