@@ -24,8 +24,8 @@
 
 ### 수정할 것
 
-[ ] kakao redirect uri를 제대로 된 도메인으로 수정해야
-[ ] env의 모든 client domain을 제대로 된 도메인으로 수정해야
+[x] kakao redirect uri를 제대로 된 도메인으로 수정해야 <- 그냥 railway에 환경 변수 넣을 때 제대로 넣으면 됨
+[x] env의 모든 client domain을 제대로 된 도메인으로 수정해야 <- 그냥 railway에 환경 변수 넣을 때 제대로 넣으면 됨
 
 ### 원장님과 대화
 
