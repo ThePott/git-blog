@@ -6,6 +6,12 @@
 
 # build window manager
 
-# build move file cli tool
-
 # rice arch linux
+
+# youtube related cli or tui
+
+## radiofy youtube
+
+## terminal youtube search -> open up dedicated player
+
+## terminal youtube search -> submit purpose -> watch -> submit review -> store them in md or something
