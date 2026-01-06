@@ -1,3 +1,10 @@
+# how to use
+
+```ts
+const regex = /.../
+const match = "some string".match(regex)
+```
+
 # match
 
 ## `String.match(regex)` Return Array
