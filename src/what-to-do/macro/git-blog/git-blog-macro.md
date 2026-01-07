@@ -10,5 +10,7 @@
 [x] path specific 내용물 api 클라이언트와 연결
 [x] path specific 내용물 api 로직 구현
 [x] 버그: 잘못된 주소 입력하면 끝도 없이 오류가 남. 원인이 무엇인지 파악해야
-[ ] 기능 수청: tree 유지 -> content에서는 content/dir/*splat, content/file/*splat으로 수정
-[ ] 현재가 file이고 확장자가 .md이면 마크다운으로 출력
+[x] 기능 수청: tree 유지 -> content에서는 content/dir/*splat, content/file/*splat으로 수정
+[x] 현재가 file이고 확장자가 .md이면 마크다운으로 출력
+[ ] markdown은 markdown formatting 해서 보여주기
+[ ] image 보여주기 <-- 이미지인지 어떻게 알지??
