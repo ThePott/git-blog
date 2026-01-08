@@ -8,3 +8,4 @@
 ## 사용처
 
 - z.input: `register`, `errors`
+- z.infer: type of `data` in `handleSubmit` of `useForm`
