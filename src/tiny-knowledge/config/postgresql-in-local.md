@@ -68,3 +68,32 @@ SHOW port;
 ```postgres
 CREATE DATABASE arbor_local
 ```
+
+### prisma와 연결하기
+
+#### migation 적용
+
+```zsh
+npx prisma migrate deploy
+```
+
+#### table 확인
+
+```postgres
+<!-- 데이터베이스 이름 보기 -->
+\l
+
+<!-- 해당 데이터베이스와 연결 -->
+\c arbor_local
+
+<!-- 해당 데이터베이스의 모든 테이블 출력 -->
+\dt
+```
+
+```zsh
+<!-- 전체 테이블 목록 확인하기 -->
+\dt
+
+<!-- 특정 테이블의 상위 1000개만 보기 (psql shorthand) -->
+TABLE table_name;
+```
