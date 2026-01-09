@@ -97,3 +97,5 @@ npx prisma migrate deploy
 <!-- 특정 테이블의 상위 1000개만 보기 (psql shorthand) -->
 TABLE table_name;
 ```
+
+#### `npx prisma generate`
