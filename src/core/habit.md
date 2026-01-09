@@ -3,4 +3,4 @@
 [x] 8시간짜리 방송 켜기: https://www.youtube.com/watch?v=7W_Q57Aj_f4
 [x] 침대 정리하기
 [x] 타자연습 기록하기: https://www.keybr.com/
-[-] 방송 끝날 때까지 코딩하기
+[ ] 방송 끝날 때까지 코딩하기
