@@ -1,6 +1,6 @@
 # git blog with react
 
-# typst
+# typst -> it would be good for resume and portfolio
 
 # read zig book
 
