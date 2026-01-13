@@ -19,9 +19,12 @@ export const Route = createFileRoute("/route/url")({
 - takes object or fucntion
 - using zod object is more concise
 
-# ai 설명: beforeLoad vs loader
+# beforeLoad vs loader
 
-## summary
+- loader: returns data, that can be used in useLoaderData
+- beforeLoad: designed for guard, redirect
+
+## summary of ai
 
 | Aspect                | beforeLoad                                | loader                    |
 | --------------------- | ----------------------------------------- | ------------------------- |
