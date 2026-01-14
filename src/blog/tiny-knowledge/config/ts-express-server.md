@@ -78,3 +78,12 @@ npm init @eslint/config@latest
 ```
 
 8. restart lsp and neovim
+
+## package.json
+
+```json
+{
+    "dev": "tsx --watch ./src/server.ts",
+    "build": "npx prisma generate && tsc"
+}
+```

@@ -25,6 +25,12 @@
 
 ## 서버 세팅
 
+[x] git_blog_local db 생성
+[ ] prisma 설치
+[ ] prisma 연결
+[ ] package build에 generate 넣기
+[ ] monkey type model 설정
+
 ## 기타
 
 [ ] 24시간 간격으로 해당 기간 동안의 기록 서버에 저장
