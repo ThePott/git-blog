@@ -1,4 +1,4 @@
-# prisma none filter
+# prisma none, some, every filter
 
 ## source
 
