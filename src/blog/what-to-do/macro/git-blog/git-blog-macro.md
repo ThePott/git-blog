@@ -26,9 +26,9 @@
 ## 서버 세팅
 
 [x] git_blog_local db 생성
-[ ] prisma 설치
-[ ] prisma 연결
-[ ] package build에 generate 넣기
+[x] prisma 설치
+[x] prisma 연결
+[x] package build에 generate 넣기
 [ ] monkey type model 설정
 
 ## 기타
