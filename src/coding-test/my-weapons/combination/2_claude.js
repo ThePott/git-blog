@@ -29,6 +29,7 @@ const combination = (arr, k) => {
             return
         }
 
+        // NOTE: 이 부분 제대로 이해 못 했다
         // Try each element from current position onwards
         // Starting from 'start' ensures we don't revisit earlier elements (no duplicates)
         for (let i = start; i < arr.length; i++) {
