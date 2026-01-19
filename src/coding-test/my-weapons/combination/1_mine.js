@@ -16,7 +16,11 @@ const combination = ({ makeSubResult, targetArray, count, ingredientArray, curre
         const rest = targetArray.slice(index + 1)
 
         const newIngredientArray = [...ingredientArray, el]
-        if (newIngredientArray.length > count) throw new Error("---- failed to stop look at time, INNER ERROR")
+        // NOTE: 여기에 걸리면 안 됨
+        if (newIngredientArray.length > count) throw new Error("SHOULD NOT FALL HERE")
+
+        // NOTE: 남은 개수가 부족하면 루프 끝냄
+        if (newIngredientArray.length + rest.length < count) return
 
         // NOTE: 개수 딱 맞으면 합치고 해당 루프 끝냄
         if (newIngredientArray.length === count) {
@@ -24,9 +28,6 @@ const combination = ({ makeSubResult, targetArray, count, ingredientArray, curre
             currentResult.push(subResult)
             return
         }
-
-        // NOTE: 남은 개수가 부족하면 루프 끝냄
-        if (newIngredientArray.length + rest.length < count) return
 
         // NOTE: 아직 남았으면
         // NOTE: 재료에 넣고 마저 돌림
