@@ -1,35 +1,41 @@
 // TODO: combine letters of two, in alphabetic order
 
-// TODO: generalize element manipulation logic to callback
-
 /**
- @param {string[]} targetArray
- @param {count} number
- @param {string[] | undefined} ingredientArray
- @param {string[] | undefined} currentResult
+ @param {Object} props
+ @param {(newIngredientArray: string[]) => void} props.makeSubResult
+ @param {string[]} props.targetArray
+ @param {number} props.count
+ @param {string[] | undefined} props.ingredientArray
+ @param {string[] | undefined} props.currentResult
 */
-const combination = (targetArray, count, ingredientArray, currentResult) => {
+const combination = ({ makeSubResult, targetArray, count, ingredientArray, currentResult }) => {
     ingredientArray = ingredientArray ?? []
     currentResult = currentResult ?? []
 
     targetArray.forEach((el, index) => {
-        console.count("loop count")
         const rest = targetArray.slice(index + 1)
 
-        // NOTE: 아직 남았으면
-        // NOTE: 재료에 넣고 마저 돌림
         const newIngredientArray = [...ingredientArray, el]
         if (newIngredientArray.length > count) throw new Error("---- failed to stop look at time, INNER ERROR")
+
+        // NOTE: 개수 딱 맞으면 합치고 해당 루프 끝냄
         if (newIngredientArray.length === count) {
-            const subResult = newIngredientArray.join("")
+            const subResult = makeSubResult(newIngredientArray)
             currentResult.push(subResult)
             return
         }
-        combination(rest, count, newIngredientArray, currentResult)
+
+        // NOTE: 남은 개수가 부족하면 루프 끝냄
+        if (newIngredientArray.length + rest.length < count) return
+
+        // NOTE: 아직 남았으면
+        // NOTE: 재료에 넣고 마저 돌림
+        combination({ makeSubResult, targetArray: rest, count, ingredientArray: newIngredientArray, currentResult })
     })
 
     return currentResult
 }
 
-const result = combination(["a", "b", "c", "d"], 4)
+const makeSubResult = (newIngredientArray) => newIngredientArray.join("")
+const result = combination({ makeSubResult, targetArray: ["a", "b", "c", "d"], count: 3 })
 console.log({ result })
