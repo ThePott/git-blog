@@ -38,6 +38,7 @@ const combination = ({ targetArray, count }) => {
     }
 
     // NOTE: 아직 좀 덜 됐다...
+    // NOTE: 이게 recursion function 안에 들어가는 게 맞아보이는데...
     targetArray.forEach((_, index) => recursiveFn({ index, current: [] }))
 
     return result
