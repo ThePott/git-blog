@@ -12,11 +12,11 @@ const combination = ({ targetArray, count }) => {
 
     // NOTE: result, current만 mutate 함
     const recursiveFn = ({ index, current }) => {
+        console.count("recursive count")
         const element = targetArray[index]
-        console.log({ index, current, element })
         if (!element) throw new Error("SHOULD HAVE STOPPED BEFORE FALL HERE")
 
-        const newCurrent = [...current, targetArray[index]]
+        const newCurrent = [...current, element]
         if (newCurrent.length > count) throw new Error("SHOULD NOT FALL HERE")
 
         // NOTE: 남은 걸 다 넣어도 부족하면 루프 끝냄
@@ -30,8 +30,6 @@ const combination = ({ targetArray, count }) => {
 
         // NOTE: 아직 남았으면
         // NOTE: 재료에 넣고 마저 돌림
-        current.push(element)
-
         for (let i = index + 1; i < targetArray.length; i++) {
             recursiveFn({ index: i, current: newCurrent })
         }
