@@ -42,27 +42,3 @@ const combination = (arr, k) => {
     backtrack(0)
     return result
 }
-
-// ============ Usage Examples ============
-
-// Basic usage - returns array of arrays
-const result = combination(["a", "b", "c", "d"], 3)
-console.log("Raw combinations:", result)
-// [["a","b","c"], ["a","b","d"], ["a","c","d"], ["b","c","d"]]
-
-// If you need joined strings (like your makeSubResult):
-const joined = result.map((combo) => combo.join(""))
-console.log("Joined strings:", joined)
-// ["abc", "abd", "acd", "bcd"]
-
-// Works with numbers too (common in LeetCode)
-const numResult = combination([1, 2, 3, 4, 5], 2)
-console.log("Number pairs:", numResult)
-// [[1,2], [1,3], [1,4], [1,5], [2,3], [2,4], [2,5], [3,4], [3,5], [4,5]]
-
-// Sum of each combination
-const sums = numResult.map((combo) => combo.reduce((a, b) => a + b, 0))
-console.log("Sums:", sums)
-// [3, 4, 5, 6, 5, 6, 7, 7, 8, 9]
-
-module.exports = { combination }
