@@ -29,7 +29,8 @@
 [x] prisma 설치
 [x] prisma 연결
 [x] package build에 generate 넣기
-[ ] monkey type model 설정
+[x] monkey type model 설정
+[x] monkeytype data 얻기
 
 ## 기타
 
