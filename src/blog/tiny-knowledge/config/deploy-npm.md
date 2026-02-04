@@ -66,7 +66,8 @@ npm view make-serializable version
 {
     "bin": {
         "make-serializable": "dist/cli.js"
-    }
+    },
+    "files": ["dist", "README.md", "./src/script.ts"]
 }
 ```
 

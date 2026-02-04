@@ -1,3 +1,5 @@
+# 최초 정리
+
 ## main source
 
 - https://www.youtube.com/watch?v=G3OyF-lRAWo
@@ -46,7 +48,8 @@ const AnimationYoutubeTutorial = () => {
 
 ### why needs changing key
 
-- nothing in motion's prop is changed, so animation does not gets updated, even when the component itself updates by state change
+- nothing in motion's prop is changed, so animation does not gets updated, even when the component itself updates by
+  state change
 
 ## 3. check height and apply in animation
 
@@ -192,3 +195,9 @@ const AnimationYoutubeTutorial = () => {
 
 - https://motion.dev/docs/react-animate-presence
 - readparagrage about "mode"
+
+# 의문
+
+- 위의 구조로 만든 게 `ProgressClassroomAccordian`. <- 그런데 여기서 안에 있는 내용물이 그냥 없어짐.
+- 아코디언은 내용물이 계속 보이는 상태에서 겉의 상자만 커졌다 작아져야 하는데
+- 그걸 어떻게 하는지 모르겠네
