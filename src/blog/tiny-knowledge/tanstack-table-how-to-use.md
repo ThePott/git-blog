@@ -2,7 +2,7 @@
 
 ## source
 
-- official docs: https://tanstack.com/table/latest/docs/introduction
+- official docs: https://tanstack.com/table/v8/docs/guide/column-defs#column-helpers
 
 ## high level guide
 
