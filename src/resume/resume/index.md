@@ -2,8 +2,7 @@
 
 - {private info phone number}
 - {private info email}
-- https://github.com/ThePott
-    <!-- - https://velog.io/@nusilite/posts -->
+- https://github.com/ThePott <!-- - https://velog.io/@nusilite/posts -->
 - 내 블로그
 
 ## 4년 동안 학원 진도 관리 시스템을 개발하고 이제는 개발자로
@@ -88,6 +87,13 @@
 - 문제집의 모든 문제 좌표를 기입할 수 있는 데이타 테이블 제작
 - 데스크탑, 모바일 환경에 대응하는 칸반 진도표
 
+### 성과
+
+- 오답과제 pdf를 생성할 때, pdf 생성을 서버 측의 typst 파일 생성을 이용해 하여 사용자 경험 개선
+    - react-pdf/renderer: 30 페이지 이상의 pdf 생성 땐 web-worker 필요
+    - 본 프로젝트 방법: TODO - 시간 얼마나 걸리는지 측정해야
+- 학생이 정오를 기록하면 자동으로 진도표 완료 여부가 반영되게 하여 강사가 수업 진행 현황을 손쉽게 파악할 수 있게 함
+
 ## 개인 블로그: from terminal to blog
 
 ### 개발 기간: 2025.11 ~ 현재
@@ -111,7 +117,7 @@
 - 동적 라우팅을 이용한 라우터 구성으로 클라이언트 코드 최소화
 - Monkeytype API의 한계를 극복하기 위한 자동 저장 데이타베이스 구축
 
-## 디자인 라이브러리 react-everforest-ui <<<< 여기서는 성과만 적는다
+## 디자인 라이브러리 react-thepott-ui <<<< 여기서는 성과만 적는다
 
 - 더 개발해서 react-thepott-ui로 한 다음 theme을 주입할 수 있게 하면 좋겠다 <<<< 사실 아직 아무것도 하지 않았지만
 
