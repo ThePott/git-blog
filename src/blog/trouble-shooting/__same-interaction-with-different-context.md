@@ -149,6 +149,7 @@ export type AssignmentQuestionWithExtraInfo = Omit<ReviewAssginmentQuestion, "st
 ### 해결책
 
 - 이름을 비슷하게 만든다
+    - ...forCheckboxGrid, ...forCheckbox
 - 사용처에서 두 타입의 이름이 대칭적인 걸 한눈에 확인할 수 있게 한다
 - 자료 구조가 다른 게 문제라면 다른 자료 구조에 대응하느라 힘을 쓸 게 아니라 자료 구조를 같게 만드는 게 좋다 << 다만
   이거는 api에서 할 게 아니라 response data를 flatten하는 util function에서 한다

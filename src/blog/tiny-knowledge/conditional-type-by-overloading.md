@@ -67,3 +67,51 @@ if (props.forWhat === "syllabus") {
 - Exhaustiveness Checking: TypeScript can verify you handled all cases
 
 - This pattern is also called "variant types" in some languages (like Rust's enum or OCaml's variant types).
+
+### 만약 속성 이름이 다르다면
+
+#### 예시 코드
+
+```tsx
+type CheckboxCommonProps = {
+    children: ReactNode
+    indexInfo: IndexInfo
+}
+type CheckboxForSyllabusProps = {
+    forWhat: "syllabus"
+    source: JoinedQuestion
+    session_id: string | null
+}
+type CheckboxForAssignmentProps = {
+    forWhat: "assignment"
+    source: ExtendedReviewAssignmentQuestion
+    assignment_id: string
+}
+
+type CheckboxProps = CheckboxCommonProps & (CheckboxForSyllabusProps | CheckboxForAssignmentProps)
+const Checkbox = ({ forWhat, children, indexInfo, source, session_id, assignment_id }: CheckboxProps) => {
+    // ...
+}
+```
+
+```
+Diagnostics:
+1. typescript: Property 'session_id' does not exist on type 'CheckboxProps'. [2339]
+3. typescript: Property 'assignment_id' does not exist on type 'CheckboxProps'. [2339]
+```
+
+#### 해결책
+
+- 조건에 따라 속성 이름이 다른데 한 번에 구조 분해 할당을 하는 게 문제이다.
+- 공통 속성만 구조분해 할당을 하고 나머지는 가능할 때 접근하는 방식을 취한다
+
+```tsx
+const Checkbox = (props: CheckboxProps) => {
+    const { forWhat, children, indexInfo, source } = props
+    // ...
+    if (forWhat === "syllabus") {
+        props.session_id // NOTE: access from props
+    }
+    // ...
+}
+```
