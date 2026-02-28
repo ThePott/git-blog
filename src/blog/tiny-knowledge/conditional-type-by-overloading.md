@@ -115,3 +115,56 @@ const Checkbox = (props: CheckboxProps) => {
     // ...
 }
 ```
+
+### 태그가 확정된 것만 쓰고 싶다면
+
+```ts
+type Checkbox =
+    | {
+          forWhat: "syllabus"
+          session_id: string | null
+      }
+    | {
+          forWhat: "assignment"
+          assignment_id: string
+      }
+```
+
+- 배경: 위 코드에서 `forWhat === "assignment"` 만 필터를 하였고 이후에서는 해당 필터가 적용된 타입을 쓰고 싶다
+- 방법: 어찌되었든 union 타입이므로 extract를 쓴다. 이 때의 조건에는 tag인 forWhat만 넣으면 된다
+
+```ts
+type CheckboxForAssignment = Extract<Checkbox, { forWhat: "assignment" }>
+```
+
+- 관련 글: https://www.typescriptlang.org/docs/handbook/utility-types.html#extracttype-union
+
+### 제네릭을 이용해 태그 확정하기 << nested type에서 유용
+
+#### 배경: discriminated union을 sub-type으로 사용한다면?
+
+```ts
+export type IdToChangedInfo = Record<string, ReviewCheckInfo>
+```
+
+- 이 경우엔 `dToChangedInfo`를 대체하는 타입을 만들어야 한다
+- 그렇다면 sub-type이 많아질 때마다 매번 새 타입을 만들어야 한다
+
+#### 해결책: MappedType
+
+```ts
+type ForWhatToCheckbox = {
+    syllabus: {
+        forWhat?: "syllabus"
+        session_id: bigint
+    }
+    assignment: {
+        forWhat: "assignment"
+        assignment_id: bigint
+    }
+}
+export type ReviewCheckInfo<TForWhat extends keyof ForWhatToCheckbox> = ForWhatToCheckbox[TForWhat]
+export type IdToChangedInfo<TForWhat extends keyof ForWhatToCheckbox> = Record<string, ReviewCheckInfo<TForWhat>>
+```
+
+#### 의문: MappedType을 써서 `TForWhat`을 키로 쓴다면, 굳이 `forWhat` 속성은 필요가 없으려나?
