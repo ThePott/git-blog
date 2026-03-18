@@ -72,5 +72,6 @@ async function main() {
 1. fork -> clone -> `yargs`의 전달인자로 `process.argv.slice(2)` 넣음
 2. commit -> push -> pull request
 3. CodeRabbit bot의 요구사항에 따라 `changeset` 작성
-4. 현재 병합 대기중
+4. review의 제안에 따라, 잘못된 명령어를 입력할 때 오류를 출력하도록 코드 수정
+5. 현재 병합 대기중
     > https://github.com/TanStack/router/pull/6941
