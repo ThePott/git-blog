@@ -64,13 +64,8 @@
         - Node.js, Express, prisma를 이용한 restful API 구축
         - 기존 Neon 데이터베이스 서버 응답 속도 개선을 위해, Railway와 PostgreSQL로 서버 교체, 응답 속도를 7초에서
             0.3초로 단축
-        - typst compiler를 이용해 서버에서 pdf를 생성하여 30매 이상의 pdf도 웹 워커 없이 생성, 브라우저 부담
-            최소화(react-pdf/renderer 대비)
+        - typst compiler를 이용해 서버에서 pdf를 생성하여 브라우저 부담 최소화, 사용자 경험 증진
     ],
 )
 
-#title-body-box(is-empty: true, heading(level: 2, "연락처"), [
-    - #text("010-6332-9205")
-    - #text("nusilite@gmail.com")
-    - #text("https://github.com/thepott")
-])
+
