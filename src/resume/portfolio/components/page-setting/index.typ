@@ -16,10 +16,13 @@
         justify: true,
     )
 
-    // #set heading(numbering: "1.A.a.i)")
     show heading.where(level: 1): set text(size: 2em)
     show heading.where(level: 2): set text(size: 1.2em)
     show heading.where(level: 3): set text(size: 1em)
-    content
+
+    {
+        show link: underline
+        content
+    }
 }
 

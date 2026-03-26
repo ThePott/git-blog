@@ -1,6 +1,6 @@
 #import "../../../components/two-column-section/index.typ": two-column-section
 #import "../../../components/title-section/index.typ": title-section
-#import "@preview/shadowed:0.3.0": shadow
+#import "../../../components/shadowed-round-box/index.typ": shadowed-round-box
 
 #let chapter-project-arbor-the-tree = [
     = Arbor The Tree - 진도 및 오답 관리 시스템
@@ -43,21 +43,29 @@
             #heading(level: 3, "해결한 문제")
             - 빠른 반응을 위해 유효성 검사 셀 수를 최소화하려 하였으나, 해당 로직이 너무 복잡해지고 버그가 많아짐
             - 모든 입력마다 전체 셀 유효성 검사를 하되, 가상 스크롤(TanStack Virtual)을 이용해 돔 노드를 최소화하여
-                (TODO: 반응 속도 재기)로 반응되게 함
+                20.38ms에서 2.28ms로 반응 시간 89% 단축(`console.time`으로 측정)
         ],
         [
-            #shadow(blur: 20pt, fill: rgb(89, 85, 101, 50%), radius: 16pt, dy: 12pt, spread: -4pt)[
-                #box(
-                    width: 100%,
-                    radius: 1em,
-                    clip: true,
-                )[
-                    #image("./grid-input.png")
-                ]
-            ]
-            #v(1em)
-            #text("테스트 계정 로그인 방법")
-            #text("문제집 등록 페이지")
+            #figure(
+                caption: [
+                    Grid Input
+                    #v(1em)
+                    #link("https://arbor-the-tree-production.up.railway.app/book/create")[
+                        문제집 등록 페이지
+                    ]
+                    #v(0.25em)
+                    #link(<how-to-use-arbor-the-tree>)[
+                        테스트 계정 이용 방법
+                    ]
+
+                ],
+                [
+                    #shadowed-round-box()[
+                        #image("./grid-input.png", width: 100%)
+                    ]
+                    #v(1em)
+                ],
+            )
         ],
     )
 
@@ -68,15 +76,15 @@
     )
     #two-column-section(
         [
-            #heading(level: 2, "최초 계획")
-            - `react-pdf/renderer`를 이용한 클라이언트 사이드 pdf 생성
-            - 문제: 대량의 pdf 생성 시, (TODO: 정확한 표현 적어야) 사용자 흐름 중단됨
-            - 제안: 성능 향상을 위해선 웹 워커를 사용해야 함
-            - 의문: 브라우저에 종속될 필요가 없는 기능인데 웹 워커가 최선인가?
+            #heading(level: 2, "최초 계획: 클라이언트 사이드 pdf 생성")
+            - `react-pdf/renderer`를 이용한 클라이언트 사이드 pdf 생성 계획
+            - 해당 작업이 브라우저 메인 스레드를 차지함
+            - #link("https://react-pdf.org/advanced")[때문에 30매 이상의 pdf 생성 시, 웹 워커 사용이 권장됨]
+            - 의문: pdf는 브라우저와 상관 없는데 웹 워커까지 써야 하나?
 
             #v(1em)
-            #heading(level: 2, "개선안")
-            - request -> create typst file -> compile to pdf -> respond
+            #heading(level: 2, "개선안: compile typst to pdf")
+            - request > create typst file > compile to pdf > respond
             #heading(level: 3, "해결한 문제")
             - 문제 1: typst는 npm install로 설치 되지 않음
             - 문제 2: typst, font 파일은 npm build로 빌드되지 않음
@@ -86,22 +94,17 @@
                 3. build에서 제외되는 파일들 dist 폴더로 이동
                     - typst template files
                     - font
-
-            #v(1em)
-            #heading(level: 2, "성능 비교")
-            - pdf 100장 생성 시 소요 시간 비교
-            - react-pdf/renderer: (TODO: 시간 재야)
-            - react-pdf/renderer with WebWorker: (TODO: 시간 재야)
-            - typst: (TODO: 시간 재야)
-
         ],
-        [#rect(
-            width: 100%,
-            height: 80%,
-            radius: 1em,
-            inset: 1em,
-            stroke: (thickness: 1pt, paint: black),
-            "성능 비교 그래프? 혹은 측정 스크린샷 넣자",
+        [#figure(
+            caption: [Performance Comparison
+                #v(1em)
+                #link("https://arbor-the-tree-production.up.railway.app/test/pdf")[
+                    성능 비교 테스트 페이지
+                ]
+            ],
+            shadowed-round-box(
+                "성능 비교 도표를 넣어야",
+            ),
         )],
     )
 
@@ -184,4 +187,23 @@
             "관련 스크린샷",
         )],
     )
-]
+
+    #pagebreak()
+    #title-section(
+        (level: 1, title: "Arbor The Tree - 이용 방법", size: "lg"),
+    ) <how-to-use-arbor-the-tree>
+    #heading(level: 2, "링크")
+    - https://arbor-the-tree-production.up.railway.app/
+    - https://arbor-the-tree-production.up.railway.app/test/login (테스트 계정 로그인)
+    - https://arbor-the-tree-production.up.railway.app/test/pdf (pdf 생성 성능 비교)
+    #v(1em)
+    #heading(level: 2, "테스트 계정")
+    #table(
+        columns: 3,
+        inset: (x: 1em, y: 0.5em),
+        stroke: (paint: luma(0, 25%)),
+        [*계정*], [*ID*], [*Password*],
+        [원장], [`test12@test.test`], [`test1234!@#$`],
+        [실장], [`test13@test.test`], [`test1234!@#$`],
+        [학생], [`test14@test.test`], [`test1234!@#$`],
+    )]

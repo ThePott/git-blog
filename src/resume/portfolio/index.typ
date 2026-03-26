@@ -1,7 +1,5 @@
 #import "./components/page-setting/index.typ": page-setting
-#import "./chapters/projects/arbor-the-tree/index.typ": (
-  chapter-project-arbor-the-tree,
-)
+#import "./chapters/projects/arbor-the-tree/index.typ": chapter-project-arbor-the-tree
 
 #show: page-setting
 
