@@ -1,4 +1,4 @@
-# Anonymoust Struct
+# Anonymous Struct
 
 ## can be key value pair, or just value
 
