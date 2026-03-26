@@ -1,5 +1,6 @@
 #import "../../../components/two-column-section/index.typ": two-column-section
 #import "../../../components/title-section/index.typ": title-section
+#import "@preview/shadowed:0.3.0": shadow
 
 #let chapter-project-arbor-the-tree = [
     = Arbor The Tree - 진도 및 오답 관리 시스템
@@ -44,14 +45,20 @@
             - 모든 입력마다 전체 셀 유효성 검사를 하되, 가상 스크롤(TanStack Virtual)을 이용해 돔 노드를 최소화하여
                 (TODO: 반응 속도 재기)로 반응되게 함
         ],
-        [#rect(
-            width: 100%,
-            height: 80%,
-            radius: 1em,
-            inset: 1em,
-            stroke: (thickness: 1pt, paint: black),
-            "this is content",
-        )],
+        [
+            #shadow(blur: 20pt, fill: rgb(89, 85, 101, 50%), radius: 16pt, dy: 12pt, spread: -4pt)[
+                #box(
+                    width: 100%,
+                    radius: 1em,
+                    clip: true,
+                )[
+                    #image("./grid-input.png")
+                ]
+            ]
+            #v(1em)
+            #text("테스트 계정 로그인 방법")
+            #text("문제집 등록 페이지")
+        ],
     )
 
     #pagebreak()
