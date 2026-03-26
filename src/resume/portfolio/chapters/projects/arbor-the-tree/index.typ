@@ -84,7 +84,7 @@
             #heading(level: 2, "성능 비교")
             - pdf 100장 생성 시 소요 시간 비교
             - react-pdf/renderer: (TODO: 시간 재야)
-            - react-pdf/renderer with WebWalker: (TODO: 시간 재야)
+            - react-pdf/renderer with WebWorker: (TODO: 시간 재야)
             - typst: (TODO: 시간 재야)
 
         ],
