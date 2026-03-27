@@ -1,7 +1,9 @@
+#import "../rem/index.typ": rem
+
 #let page-setting(content) = {
     set text(
         font: "Noto Serif KR", // fallback chain
-        size: 11pt,
+        size: rem(1),
     )
 
     set page(
@@ -16,9 +18,9 @@
         justify: true,
     )
 
-    show heading.where(level: 1): set text(size: 2em)
-    show heading.where(level: 2): set text(size: 1.2em)
-    show heading.where(level: 3): set text(size: 1em)
+    show heading.where(level: 1): set text(size: rem(2))
+    show heading.where(level: 2): set text(size: rem(1.2))
+    show heading.where(level: 3): set text(size: rem(1))
 
     {
         show link: underline

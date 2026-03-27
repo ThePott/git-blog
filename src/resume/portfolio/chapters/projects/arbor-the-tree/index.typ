@@ -1,6 +1,7 @@
 #import "../../../components/two-column-section/index.typ": two-column-section
 #import "../../../components/title-section/index.typ": title-section
 #import "../../../components/shadowed-round-box/index.typ": shadowed-round-box
+#import "../../../components/rem/index.typ": rem
 
 #let chapter-project-arbor-the-tree = [
     = Arbor The Tree - 진도 및 오답 관리 시스템
@@ -29,13 +30,13 @@
             - 구글 스프레드 시트와 유사한 UI
             - custom data attribute `data-coordinate`을 이용한 키보드 내비게이션
 
-            #v(1em)
+            #v(rem(1))
             #heading(level: 2, "다중 입력")
             - 셀에 `/` 입력 시, 자동으로 알맞는 값을 오버레이, 그 밑의 빈 셀 모두에 같은 값 오버레이
             - 문제 번호에 `~` 입력 시, 해당 번호들을 자동 완성 (예: `확인 1~10`)
             - 문제 번호 끝에 `-` 입력 시, 해당 셀부터 끝까지의 문제 번호 삭제 (예: `122-`)
 
-            #v(1em)
+            #v(rem(1))
             #heading(level: 2, "유효성 검사")
             - 문제 번호 없이 다른 열의 값 기입 시 오류 알림
             - 자동 완성할 것이 더 이상 없을 때 `/`를 사용 시 오류 알림
@@ -49,11 +50,11 @@
             #figure(
                 caption: [
                     Grid Input
-                    #v(1em)
+                    #v(rem(1))
                     #link("https://arbor-the-tree-production.up.railway.app/book/create")[
                         문제집 등록 페이지
                     ]
-                    #v(0.25em)
+                    #v(rem(0.25))
                     #link(<how-to-use-arbor-the-tree>)[
                         테스트 계정 이용 방법
                     ]
@@ -63,7 +64,7 @@
                     #shadowed-round-box()[
                         #image("./grid-input.png", width: 100%)
                     ]
-                    #v(1em)
+                    #v(rem(1))
                 ],
             )
         ],
@@ -97,7 +98,7 @@
         ],
         [#figure(
             caption: [Performance Comparison
-                #v(1em)
+                #v(rem(1))
                 #link("https://arbor-the-tree-production.up.railway.app/test/pdf")[
                     성능 비교 테스트 페이지
                 ]
@@ -125,7 +126,7 @@
                 - 4. context type 수정
             - 어느 상태가 변해도 context 구독 중인 모든 컴포넌트가 리렌더 됨
 
-            #v(1em)
+            #v(rem(1))
             #heading(level: 2, "개선안")
             - 컴포넌트 별 스토어 제작
             - 상태를 하나 추가할 때마다 2곳의 코드만 수정하면 됨
@@ -146,8 +147,8 @@
         [#rect(
             width: 100%,
             height: 80%,
-            radius: 1em,
-            inset: 1em,
+            radius: rem(1),
+            inset: rem(1),
             stroke: (thickness: 1pt, paint: black),
             "관련 내용 도식화",
         )],
@@ -169,7 +170,7 @@
             - 문제: TODO 채워 넣어야
             - 문제: TODO 채워 넣어야
 
-            #v(1em)
+            #v(rem(1))
             #heading(level: 2, "개선안")
             - 컴포넌트 별 스토어 제작
             - 상태를 하나 추가할 때마다 2곳의 코드만 수정하면 됨
@@ -181,8 +182,8 @@
         [#rect(
             width: 100%,
             height: 80%,
-            radius: 1em,
-            inset: 1em,
+            radius: rem(1),
+            inset: rem(1),
             stroke: (thickness: 1pt, paint: black),
             "관련 스크린샷",
         )],
@@ -194,13 +195,14 @@
     ) <how-to-use-arbor-the-tree>
     #heading(level: 2, "링크")
     - https://arbor-the-tree-production.up.railway.app/
-    - https://arbor-the-tree-production.up.railway.app/test/login (테스트 계정 로그인)
-    - https://arbor-the-tree-production.up.railway.app/test/pdf (pdf 생성 성능 비교)
-    #v(1em)
+    - https://github.com/ThePott/arbor-the-tree
+    - #link("https://arbor-the-tree-production.up.railway.app/test/login")[테스트 계정 로그인 페이지]
+    - #link("https://arbor-the-tree-production.up.railway.app/test/pdf")[pdf 생성 성능 비교 페이지]
+    #v(rem(1))
     #heading(level: 2, "테스트 계정")
     #table(
         columns: 3,
-        inset: (x: 1em, y: 0.5em),
+        inset: (x: rem(1), y: rem(0.5)),
         stroke: (paint: luma(0, 25%)),
         [*계정*], [*ID*], [*Password*],
         [원장], [`test12@test.test`], [`test1234!@#$`],
