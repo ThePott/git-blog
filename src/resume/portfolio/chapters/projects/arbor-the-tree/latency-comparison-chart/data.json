@@ -1,7 +1,7 @@
 {
     "labels": ["8쪽", "80쪽", "800쪽"],
     "series": [
-        { "name": "react-pdf/renderer", "values": [347.3, 673.3, 3182.1] },
+        { "name": "React-pdf", "values": [347.3, 673.3, 3182.1] },
         { "name": "compiling typst to pdf", "values": [330.8, 466.6, 1231.5] }
     ]
 }

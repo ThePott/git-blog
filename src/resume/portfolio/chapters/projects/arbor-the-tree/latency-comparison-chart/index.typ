@@ -3,12 +3,15 @@
 #let data = json("./data.json")
 
 
-#let latency-comparison-chart = box(fill: white, width: 100%, inset: (x: rem(1)))[
+#let latency-comparison-chart = box(fill: white, width: 100%)[
     #grouped-bar-chart(
-        width: 90%,
+        width: 80%,
         height: 50%,
         title: "React-pdf vs compiling typst to PDF",
-        y-label: "latency (ms)",
+        y-label: [
+            #v(rem(1))
+            generation time (ms)
+        ],
         data,
     )
 ]
