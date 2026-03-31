@@ -21,4 +21,4 @@
 
 ## Question: How does it tell this is `MA==` not `MAAA`?
 
-- full padding 6-bit group converts to `=`
+- full padding 6-bit group (or "padding group") converts to `=`
