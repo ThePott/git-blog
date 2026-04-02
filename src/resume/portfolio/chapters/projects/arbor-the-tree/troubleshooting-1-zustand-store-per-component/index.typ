@@ -37,13 +37,8 @@
             - localStore -> context -> useContext -> useStore 과정을 실행하는 후크 제작
             - Provider로 자식을 감싸면 해당 컴포넌트의 자식은 해당 Provider에 종속된 useLocalStore를 바로 쓸 수 있음
         ],
-        [#rect(
-            width: 100%,
-            height: 80%,
-            radius: rem(1),
-            inset: rem(1),
-            stroke: (thickness: 1pt, paint: black),
-            local-store-diagram,
-        )],
+        [
+            #shadowed-round-box(local-store-diagram)
+        ],
     )
 ]
