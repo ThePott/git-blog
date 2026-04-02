@@ -45,8 +45,12 @@
     #heading(level: 2, "링크")
     - https://arbor-the-tree-production.up.railway.app/
     - https://github.com/ThePott/arbor-the-tree
-    - #link("https://arbor-the-tree-production.up.railway.app/test/login")[테스트 계정 로그인 페이지]
-    - #link("https://arbor-the-tree-production.up.railway.app/test/pdf")[pdf 생성 성능 비교 페이지]
+    - #link(
+            "https://arbor-the-tree-production.up.railway.app/test/login",
+        )[테스트 계정 로그인 페이지]
+    - #link(
+            "https://arbor-the-tree-production.up.railway.app/test/pdf",
+        )[pdf 생성 성능 비교 페이지]
     #v(rem(1))
     #heading(level: 2, "테스트 계정")
     #table(
