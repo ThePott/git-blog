@@ -1,5 +1,6 @@
 #import "./components/page-setting/index.typ": page-setting
 #import "./chapters/projects/arbor-the-tree/index.typ": chapter-project-arbor-the-tree
+#import "./components/rem/index.typ": rem
 
 #show: page-setting
 
@@ -28,6 +29,7 @@
 == documentation
 - Typst
 
+#v(rem(2))
 = 주요 프로젝트
 == Arbor The Tree - 진도 및 오답 관리 시스템
 == IUA React UI - 디자인 라이브러리

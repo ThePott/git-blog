@@ -1,5 +1,5 @@
 #import "@preview/primaviz:0.5.3": *
-#import "../../../../components/rem/index.typ": rem
+#import "../../../../../components/rem/index.typ": rem
 #let data = json("./data.json")
 
 

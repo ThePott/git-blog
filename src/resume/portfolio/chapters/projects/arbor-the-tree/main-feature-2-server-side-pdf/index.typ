@@ -2,7 +2,7 @@
 #import "../../../../components/title-section/index.typ": title-section
 #import "../../../../components/shadowed-round-box/index.typ": shadowed-round-box
 #import "../../../../components/rem/index.typ": rem
-#import ".././latency-comparison-chart/index.typ": latency-comparison-chart
+#import "latency-comparison-chart/index.typ": latency-comparison-chart
 
 #let main-feature-2-server-side-pdf = [
     #title-section(

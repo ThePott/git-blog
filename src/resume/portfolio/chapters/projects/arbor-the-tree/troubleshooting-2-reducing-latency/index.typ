@@ -10,30 +10,38 @@
     )
     #two-column-section(
         [
-            #heading(level: 2, "최초 계획")
-            - api server on Railway, db server on Neon
-            - 문제: TODO 채워 넣어야
-            - 문제: TODO 채워 넣어야
-            - 문제: TODO 채워 넣어야
-            - 문제: TODO 채워 넣어야
-            - 문제: TODO 채워 넣어야
+            #heading(level: 2, "최초 계획: API In Railway, DB With Neon")
+            - PostgeSQL 서버를 제공하는 Neon을 이용해 DB 구축
+            - 문제: 문제집 생성할 때 응답까지 7초 가량 걸림
+            - 원인 후보: network latency, cold start
+            #heading(level: 3, "troubleshooting")
+            - chaned Railway region from "US East (Virginia, USA)" to "Southeast Asia (Singapore)"
+                - 응답 시간이 여전히 5\~7초
+            - Neon의 free plan은 cold start가 강제됨
+            - Neon의 region은 "AWS US East 1 (N. Virginia)" 하나 밖에 없음
 
             #v(rem(1))
-            #heading(level: 2, "개선안")
-            - 컴포넌트 별 스토어 제작
-            - 상태를 하나 추가할 때마다 2곳의 코드만 수정하면 됨
-                - 1. 컴포넌트 interface에 해당 타입 추가
-                - 2. 컴포넌트 props에 해당 매개변수 추가
-                - props 전체가 store provider에 넘겨지기에 추가로 수정할 부분 없음
-            - 자식 컴포넌트가 사용하는 상태가 변경될 때만 리렌더가 됨
+            #heading(level: 2, "개선안: deploy my psql, also in railway")
+            - 응답 속도 단축을 위해선
+                1. cold start 없는 DB 서버 필요
+                2. 최대한 가까운 region에 배포해야
+            - Railway에 PostgeSQL 서버 배포
+                - API와 DB를 같은 internal server에 배포하여 round-trip latency 최소화
+
+            #v(rem(1))
+            #heading(level: 2, "성과")
+            - 문제집 생성 시간 315 ms로 단축 (22배 향상)
         ],
-        [#rect(
-            width: 100%,
-            height: 80%,
-            radius: rem(1),
-            inset: rem(1),
-            stroke: (thickness: 1pt, paint: black),
-            "관련 스크린샷",
-        )],
+        [
+            #shadowed-round-box(
+                title: [Original Server Response Time],
+                content: image("./database-speed-wrong-region.png"),
+            )
+            #v(rem(1))
+            #shadowed-round-box(
+                title: [Improved Server Response Time],
+                content: image("./database-speed-internal-network.png"),
+            )
+        ],
     )
 ]
