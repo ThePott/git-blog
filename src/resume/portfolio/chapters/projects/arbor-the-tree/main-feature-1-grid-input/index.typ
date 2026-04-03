@@ -31,24 +31,18 @@
                 20.38ms에서 2.28ms로 반응 시간 89% 단축(`console.time`으로 측정)
         ],
         [
-            #figure(
-                caption: [
-                    Grid Input
-                    #v(rem(1))
-                    #link("https://arbor-the-tree-production.up.railway.app/book/create")[
+            #shadowed-round-box(
+                title: [Grid Input],
+                subtitle-array: (
+                    link("https://arbor-the-tree-production.up.railway.app/book/create")[
                         문제집 등록 페이지
-                    ]
-                    #v(rem(0.25))
-                    #link(<how-to-use-arbor-the-tree>)[
+                    ],
+                    link(<how-to-use-arbor-the-tree>)[
                         테스트 계정 이용 안내
-                    ]
-
-                ],
-                [
-                    #shadowed-round-box()[
-                        #image("./grid-input.png", width: 100%)
-                    ]
-                    #v(rem(1))
+                    ],
+                ),
+                content: [
+                    #image("./grid-input.png", width: 100%)
                 ],
             )
         ],

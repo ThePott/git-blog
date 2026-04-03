@@ -16,7 +16,7 @@
         #align(center)[
             #diagram(
                 node-defocus: 0,
-                spacing: (1cm, 2cm),
+                spacing: (1cm, 1cm),
                 edge-stroke: 1pt,
                 crossing-thickness: 5,
                 mark-scale: 100%,

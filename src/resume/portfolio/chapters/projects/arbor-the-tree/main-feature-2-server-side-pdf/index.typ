@@ -37,17 +37,16 @@
             - 800쪽 생성 시간 61.3% 단축
             - PDF 생성이 브라우저 메인 스레드를 점유하지 않아 사용자 조작에 반응
         ],
-        [#figure(
-            caption: [PDF Generation Time Comparison
-                #v(rem(1))
-                #link("https://arbor-the-tree-production.up.railway.app/test/pdf")[
-                    성능 비교 테스트 페이지
-                ]
-            ],
-            [
-                #shadowed-round-box(latency-comparison-chart)
-                #v(rem(1))
-            ],
-        )],
+        [
+            #shadowed-round-box(
+                title: [PDF Generation Time Comparison],
+                subtitle-array: (
+                    link("https://arbor-the-tree-production.up.railway.app/test/pdf")[
+                        성능 비교 테스트 페이지
+                    ],
+                ),
+                content: [#latency-comparison-chart],
+            )
+        ],
     )
 ]

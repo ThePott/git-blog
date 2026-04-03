@@ -30,15 +30,12 @@
             1. pass values to factory function that returns `createStore`
             2. call factory function to create distinct stores
             3. `useStore` with distinct stores
-
-            #v(rem(1))
-            #heading(level: 2, "reducing boilerplate")
-            - 모든 자식들이 어떤 스토어로 `useStore`를 사용해야 하는지 고민할 필요가 없어야 함
-            - localStore -> context -> useContext -> useStore 과정을 실행하는 후크 제작
-            - Provider로 자식을 감싸면 해당 컴포넌트의 자식은 해당 Provider에 종속된 useLocalStore를 바로 쓸 수 있음
         ],
         [
-            #shadowed-round-box(local-store-diagram)
+            #shadowed-round-box(
+                title: [Component-Local Store Pattern],
+                content: [#local-store-diagram],
+            )
         ],
     )
 ]
