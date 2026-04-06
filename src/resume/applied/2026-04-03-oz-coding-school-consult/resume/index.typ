@@ -27,7 +27,7 @@
     #heading(level: 3, "frontend development")
     - React.js를 이용한 프론트엔드 개발
     - TanStack Virtual을 이용한 성능 최적화
-    - bun test, happy-dom을 이용한 테스트 환경 구축
+    // - bun test, happy-dom을 이용한 테스트 환경 구축
     - 공통 컴포넌트를 npm package로 배포하여 초기 개발 시간 절약
     #heading(level: 3, "backend development")
     - Bun, Express를 이용한 서버 제작

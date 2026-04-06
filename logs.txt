@@ -1,0 +1,6 @@
+new run
+---- PWD: /Users/haheungju/Desktop/SRC/DRAGON_WARRIOR/BLOG/git-blog
+---- SESSION: harpooning-tmux
+---- PWD: /Users/haheungju/Desktop/SRC/DRAGON_WARRIOR/BLOG/git-blog
+---- SESSION: harpooning-tmux
+---- PWD: /Users/haheungju/Desktop/SRC/DRAGON_WARRIOR/BLOG/git-blog
