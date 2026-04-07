@@ -21,10 +21,8 @@
     #pagebreak()
     #main-feature-2-server-side-pdf
 
-
     #pagebreak()
     #troubleshooting-1-zustand-store-per-component
-
 
     #pagebreak()
     #troubleshooting-2-reducing-latency
