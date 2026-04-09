@@ -1,175 +1,173 @@
-## Slide 1
-
-<!--표지-->
-<!-- 세로 4등분(1, 3) -->
-
-|      |               |     |     |
-| ---- | ------------- | --- | --- |
-| 사진 | 하흥주        |     |     |
-|      | Web Developer |     |     |
-|      | Portfolio     |     |     |
-
-## Slide 2
-
-<!--자기소개 페이지-->
-<!-- 세로 4등분 -->
-
-| 사진 | About Me          | Education                      | Channel              |
-| ---- | ----------------- | ------------------------------ | -------------------- |
-|      | - 이름            | - 오즈코딩스쿨 프론트엔드 12기 | - 깃헙               |
-|      | - 학교            |                                | - 내 블로그를 만들자 |
-|      | - 아르보 수학학원 |                                |                      |
-|      |                   |                                |                      |
-
-## Slide 3
-
-<!--보유 스택-->
-
-### 프론트엔드
-
-1. React
-2. TypeScript
-3. 상태 관리 ---- Zustand, TanStack Query, Router, Virtual, React Hook Form
-4. Headless UI ---- Tanstack Table
-5. 유효성 검사 ---- Zod
-
-### 백엔드
-
-1. Node.js
-2. Express
-
-### 데이터베이스
-
-1. Neon(PostgreSQL)
-2. Prisma
-3. PostgreSQL
-
-### 개발 환경
-
-1. NeoVim
-2. Tmux
-3. Arch Linux
-
-### 배포
-
-1. AWS S3 + CloudFront
-2. Railway
-
-## Slide 4
-
-<!-- 주요 프로젝트 목차-->
-
-- 아르보 진도 관리 시스템
-- 개인 blog: From terminal to web
-- StudyHub 우리 파트
-
-## 아르보 진도 관리 시스템 소개
-
-### 제작 배경
-
-- 학원 강사 재직 시절 혼자 사용할 목적으로 구축한 시스템을 상업적으로 쓰기에 재편
-- 실사용을 전제로 제작
-
-### troubleshoot: infinite rendering needs to be checked by logging vs eslint no console
-
-#### 배경
-
-- table을 memoize 하지 않고 만드는 경우가 종종 있음 -> 무한 렌더링 이슈
-- no console rule을 사용하지 않으면 시간이 지날수록 console log로 지저분해져서 상황 판단이 어려워짐 -> no console
-- 평소에 로그를 안 찍기 때문에 어디부터 로그를 찍어야할지 막막함
-- 임시방편: opencode로 로그를 대신 찍으라 하고 콘솔창 확인
-- 더 나은 방법 모색: debug package 이용, opencode 이용하여 debug 로깅
-
-#### 문제 발생: ai 코드 리뷰하려는데, import 순서를 바꾸는 등, 불필요한 수정으로 무엇이 진짜 수정인지 판단이 어려워짐
-
-- 저장할 때마다 organize import 하도록 prettier plugin 사용
-
-### troubleshoot: 7 seconds response
-
-#### 배경
-
-#### 문제 파악
-
-#### 해결
-
-### troubleshoot: table modeling
-
-#### 배경
-
-- 반별 수업과 개별 수업을 동시에 운용하려다보니 엣지 케이스들이 너무 많음
-- 반에 문제집 부여할 때
-    - 모든 학생들에게 문제집 부여 되어야 -> `book_classroom` 모델
-    - 하지만 진도 추적은 학생별로 되어야(뒤쳐지는 학생 알아야 하니까) -> 그럼 개별로??
-        - 그렇다면 나중에 반에 들어갈 때 반에 이미 부여된 문제집이 신규 학생에게도 자동으로 부여되게 하는 게 어려움
-
-#### ai raw
-
-Book Assignment vs Session Tracking: Problem & Solution
-Problem
-| Level | Unit | Conflict |
-|-------|------|----------|
-| Book assignment | Classroom | "수학반 uses 수학의정석" - shared, 1 row |
-| Session tracking | Student | "김철수 completed Session 3" - individual, needs per-student rows |
-Core conflict: Books are assigned at classroom level, but progress must be tracked at student level. This creates sync issues:
-
-- New student joins → missing session records
-- New session added → existing students don't have it
-- Book removed → orphan session records
-
+---
+- 각 부분은 상위 키 메시지를 뒷받침하는 키 메시지가 있어야 한다.
+- 전체 키 메시지
+- 트렌드보다 본질, 복잡함보다 명확함
+- 문제를 정확히 정의하고, 단순한 해결책을 만듭니다
 ---
 
-Solution
-Two separate models with different purposes:
-book_classroom → "What books does this classroom use?" (shared)
-student_session → "What is this student's progress?" (individual)
-Key insight: Don't pre-create all student_session rows. Create them on-demand when assigning homework/today.
-| Session state | student_session row |
-|---------------|----------------------|
-| Future (not assigned) | No row (derive from syllabus) |
-| Homework | Row with HOMEWORK |
-| Today | Row with TODAY |
-| Done | Row with DONE |
-Progress page query:
-All sessions (from book → syllabus → sessions)
-LEFT JOIN student_session
-→ No row = not assigned, Row = show status
-Result: No manual sync needed. Available sessions are derived from relationships, only assigned/completed sessions are stored.
+# 이력서 다시 쓰기
 
-## 깃 블로그 소개
+## cover
 
-### 제작 배경
+- 프론트엔드 개발자 하흥주
+- 트렌드보다 본질, 복잡함보다 명료함
+- 문제를 정확히 정의하고, 단순한 해결책을 만듭니다
+- 우측 하단: 연락처
+- 배경: pawn
 
-- 사소한 지식들이 수시로 쌓이는데, 이것을 기록하는 보통의 개발자 블로그에 기록하는 데에는 수고가 많이 듦(블로그 플랫폼 들어가기 -> 내 블로그 -> 글 쓰기)
-- 블로그가 브라우저의 다른 탭들에 뒤섞여 찾는 데에 시간이 걸림 -> 작성할 때마다 수시로 불편함을 겪음
-- 코드 작성하듯이 빠르게 작성하면 좋겠음
-- 타자 연습을 하는 데에 커스텀 규칙을 적용하고 싶음
+## Tech Stack
 
-### 기획 방향
+- 각 부분마다 내가 중요하게 생각하는 것과 라이브러리의 어디가 그 가치에 맞는지 적어야
 
-- 터미널에서 기록해서 Tmux, Telescope, Harpoon으로 빠른 탐색이 가능해야 함
-- 내가 이렇게 잘 기록하고 있다는 걸 남들도 보기 쉬운 형태로 공유해야
-- local: markdown files
-- publish in github
-- fetch github and display in react app
-- 터미널에서의 마크다운 파일로는 이미지를 볼 수 없음
+### client
 
-![](../../../assets/portfolio-plan-no-image-in-terminal.png)
+- 클라이언트 사이드에서 발생하는 많은 문제들은 javascript 때문입니다.
+- React with Vite, Bun
+    - 리액트를 사용하면 돔 조작을 선언적으로 할 수 있습니다.
+    - 시장 대부분을 점유하고 있는 Vite를 사용하고 있으나, 의존성을 줄이고 속도를 높이려 Bun도 사용하고 있습니다. 다만,
+      Bun의 HMR가 불안정해 빠른 빌드 타임으로 번 시간을 로컬 서버를 다시 끄고 켜는 시간으로 허비하고 있어 확실한 강점을
+      못 찾았습니다.
+- TanStack Query, Router, Table, Virtual + Zustand
+    - 리액트의 가장 큰 풋건은 상태입니다. 이 상태들을 관리하기 위해 TanStack의 라이브러리들과 Zustand를 활용합니다.
+- Zod
+    - 타입스크립트는 compile time type만 제공합니다. runtime type을 위해 Zod를 사용합니다.
 
-### troubleshoot
+### api
 
-## 디자인 라이브러리 react-everforest-ui 소개 <<<< 아직은 한 것 없다
+- ... 내가 이 라이브러리들로 해결하려고 한 게 무엇일까?
+- Express.js
+    - ... 내가 쓸 수 있는 백엔드가 이거 하나라서 사용한다. 지금까지 실사용이 없다시피한 앱만 만들었기 때문에
+      Express.js의 성능으로 부족한 건 없었다. << 이건 뭐 어떻게 적어야 키 메시지에 맞지?
+- Prisma
+    - schema를 바꿀 때마다 이를 개발 서버, 배포 서버 등 여러 곳에 동일하게 적용해야 합니다. Prisma를 사용하면 schema를
+      쉽게 동기화할 수 있습니다.
+- PostgreSQL
+    - Neon, Supabase 등의 데이터베이스 서비스를 이용하는 것보다 API 서버와 같은 곳에 직접 DB 서버를 배포하는 것이 더
+      빠릅니다.
 
-- 더 개발해서 react-thepott-ui로 한 다음 theme을 주입할 수 있게 하면 좋겠다 <<<< 사실 아직 아무것도 하지 않았지만
+### deployment
 
-### 제작 배경
+- 배포는 싸고 빨라야 합니다.
+- Railway
+    - 5 달러 fixed fee plan을 이용하면 가격 부담이 없습니다.
+    - client, api, db를 모두 배포할 수 있습니다.
+    - region을 싱가폴로 설정할 수 있어 레이턴시도 비교적 낮습니다.
+- S3 + CloudFront
+    - client 배포만 가능하기에 백엔드 팀과 협업할 때만 사용합니다.
+    - EC2는 수익이 없는 프로젝트를 운영하기엔 가격 부담이 심해서 사용하고 있지 않습니다.
 
-- 새 프로젝트를 만들 때마다 공통 컴포넌트를 세팅하는 데에 불필요한 시간이 너무 소요됨
-- 디자인 라이브러리는 추상화가 과도하게 되어 있어 커스터마이징을 할 때 불필요한 노력을 해야 함
-- 재사용 컴포넌트만 별도 폴더에 넣어 관리하더라도 의존성 관리 등이 번거로움
+### documentation
 
-### 기획 방향
+- 코드 뿐 아니라 문서도 modular 하게 관리되어야 합니다. 스타일링은 마우스를 움직이며 하는 게 아니라 명확하게 선언되어야
+  합니다.
+- Typst
+    - 지금의 포트폴리오도 Typst로 작성하였습니다.
+    - 반복되는 스타일을 함수로 만들어 재사용할 수 있습니다.
+    - 글들을 섹션별로 나눠 작성하고 부모 파일에 임포트할 수 있습니다. 이로써 전체 글을 보다 쉽게 관리할 수 있습니다. <<
+      좀 모호한가??
 
-- 공통 컴포넌트를 별도의 프로젝트로 만들어 버전 관리
-- npm이 아닌 npx: node module로 만들어 블랙박스가 되면 커스터마이징이 어려움. 소스코드를 사용자의 프로젝트 폴더에 넣어서 수정하기 쉽게 해야 함
+### 개선안
 
-### troubleshoot
+> 복잡한 도구보다 문제에 맞는 단순한 조합을 선택합니다.
+
+| 영역   | 해결하려는 문제             | 선택                     |
+| ------ | --------------------------- | ------------------------ |
+| 렌더링 | DOM 직접 조작의 복잡함      | React                    |
+| 상태   | 서버/클라이언트 상태 혼재   | TanStack Query + Zustand |
+| 타입   | 런타임 타입 부재            | Zod                      |
+| DB     | 동기화 환경별 스키마 불일치 | Prisma                   |
+| 성능   | 외부 DB cold start          | Railway 내부 배포        |
+| 문서   | GUI 종속 스타일링           | Typst                    |
+
+## (주요 프로젝트는 삭제하자. 지금은 Arbor The Tree 밖에 없다. )
+
+## Arbor The Tree
+
+### introduction
+
+- 개별 진도 수업에 관한 소개
+- 이에 따라 발생하는 문제
+    - 진도, 숙제를 추적하기가 어려움
+        - 그림: 저번시간 어디까지 진도 나갔지? 여기요. 내가 이거 숙제로 내지 않았어? 아니요. ?? 그래? << 앉아있는 두 명,
+          말풍선
+
+- 수학 입시 학원 전반에 발생하는 문제
+    - 같은 문제집을 반복 숙달하는 게 좋다는 걸 모두가 알지만 틀린 문제를 추적 관리하는 게 안 되다보니 새 문제집을 계속
+      풀림
+    - 틀리는 문제는 계속 틀리고 맞히는 문제만 계속 맞히게 됨
+
+- 기존 시스템에서 발생한 문제
+    - 이를 이용하기 위해 문제집의 모든 문제 좌표를 구글 시트에 올림
+    - 구글 시트에 정오를 기록하고, 파이썬을 이용해 틀린 문제를 추출, 오답과제를 생성
+    - 오답과제의 정오도 마찬가지로 기록, 오답을 계속 풀림
+    - 구글 시트를 데이터베이스로 사용해서 느렸음
+    - cli 에서만 작동하여 다른 강사들이 사용법을 익히지 못함
+
+- 부트 캠프 수료 후, 전 학원의 원장에게 연락, 해당 시스템을 웹앱으로 제작하자고 제안
+    - 원장 요구사항
+        - 쓰기 쉬워야 한다.
+        - 빨라야 한다.
+
+### 기획
+
+- 기존 시스템 흐름
+- 자동화하기로 한 부분
+    - 오답 체크를 학생이 하자. << 강사가 하면 학생 한 명 당 3분 소요. 방학 중엔 한 반에 20명, 1시간 소요
+    - 오답 체크를 입력하면 자동으로 진도표에 갱신이 되게 하자.
+- 시스템 사용 흐름
+
+### 시스템 상의 핵심 기능: Grid Input
+
+- grid input 기획 이유
+    - 문제집을 db에 입력하기가 쉬워야 함
+    - 기존 구글 시트에서 사용했을 때의 불편함
+        - 매번 단원 바뀔 때마다 단원 이름을 일일이 적으면 나중에 단원 이름을 제대로 적었나 확인하기가 어려움
+    - 구글 시트에서 좋은 것
+        - 자동 완성으로 문제 번호 빠르게 기입
+        - formula 이용해서 안 채운 셀을 위의 값으로 채우기
+    - 구글 시트의 좋은 점은 차용하고 불편한 점은 고치자
+- 자동 완성
+- 유효성 검사
+- 렌더링 속도 개선
+
+### 시스템 상의 핵심 기능: Server side pdf
+
+- pdf 생성 이유 << 이것들이 각각의 슬라이드가 되어야 한다.
+    - 학생이 오답을 풀게 하기 위해 틀린 문제만 추출하여 학습지 형태로 제공함
+    - 강사가 수업 준비를 할 때 각 학생별로 오답과제를 제작하여 출력함
+    - 10명에서 20명의 학생의 오답 과제를 제작해야 되기 때문에 빠른 생성 시간이 중요함
+- React Pdf를 사용하지 않은 이유
+    - 가장 흔한 해결책이지만 브라우저와 무관한 pdf 생성 작업을 브라우저에서 하다보니 성능상 불리
+    - 공식 문서에서도 30매 이상은 브라우저 메인 스레드를 차지하는 시간을 웹 워커를 이용해 줄이길 권장
+    - 브라우저와 무관한 작업을 브라우저에서 하고 그로 인한 문제를 해결하는 것보다, 서버에서 작업하기를 선택
+- typst pdf 생성 과정 설명
+    - request -> query -> create typst template -> compile to pdf -> respond
+- 배포 중 vite 번들러가 해결해주지 못하는 부분 해결
+    - vite 번들러는 ts외의 것은 빌드해주질 못함
+    - 빌드 후, 아래 파일들을 dist 폴더로 이동
+        - typst templates
+        - fonts
+    - typst compiler는 npm install로 설치할 수 없었기에 railway build script를 bash로 작성하여 npm install 전에 curl로
+      설치되게 함
+
+### trouble shoot: zustand store per component
+
+- 복잡한 공통 컴포넌트를 만들 땐 부모의 상태를 자식에게 매번 넘겨주는 것이 불편하다
+- 이를 해결하기 위해서 Context API를 사용했으나, 이 또한 불편함 << 구체적으로 뭐가 불편하지? 상태를 하나 만들 때마다
+  번거로운 작업을 해야 함 (3열로 만들어 각 경우 도식화하기 - 간단한 예시 코드 보이기)
+    - 외부로부터 상태를 props로 받을 때
+    - useState을 이용해 상태를 만들 때
+- zustand local store 만든 방법 설명 (기존 것 유지해도 되겠다.)
+    - 도표의 세로 간격만 더 늘려서 화살표가 여유롭게 보이게 하자
+
+### trouble shoot: reducing latency
+
+- 문제집 생성 시간이 7초나 걸리는 문제 발생
+    - 클라이언트는 사용자 조작에 즉각적으로 반응하기를 요구
+- 원인 파악: cold start & region
+    - 데이터 양 문제는 아님: 문제집 생성 데이터를 많이 넣든 적게 넣든 걸리는 시간은 비슷
+    - cold start: 요청을 반복적으로 하면 응답 시간이 절반 가량으로 줄어듦
+    - region: api in railway(singapore)으로 바꿨는데, db in neon(w. verginia)은 고정되어 바꿀 수가 없음
+- 해결책: neon을 쓰지 않고 db server를 railway internal server에 함께 배포
+    - internal server 스크린샷
+    - 성과 적기
