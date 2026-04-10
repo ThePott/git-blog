@@ -9,7 +9,8 @@
     - 밑의 키워드
     - "../../applied/2026-04-03-oz-coding-school-consult/resume/"
     - "../../applied/2026-04-03-oz-coding-school-consult/portfolio/"
-- {"./inflearn/index.md"}에 작성하고 그 이외의 어떤 파일도 수정하지 마.
+- {"./inflearn/generated.md"}에 작성하고 그 이외의 어떤 파일도 수정하지 마.
+- 지원 동기는 주어진 자료를 바탕으로 작성해.
 
 ### 형식
 
@@ -105,3 +106,29 @@ https://www.linkedin.com/posts/sjpark11_%EC%9D%B8%ED%94%84%EB%9E%A9-%EC%9D%B8%ED
 48. Open Source
 49. Architecture
 50. Shared Value
+
+# 추가 정보
+
+- Next.js 경험: 채용공고에서 Next.js(Pages Router) 기반 개발을 언급하는데, 해당 경험이 있나요?
+    - Next.js의 입문 강의를 들은 상태.
+    - 구체적 프로젝트 경험은 없음
+- React Native 경험: 모바일 앱 개발 경험이 있나요?
+    - Swift,SwiftUI를 이용한 iOS 개발 경험만 있음 (8개 앱 배포, 실사용자는 없는 수준)
+- 모노레포 경험: pnpm, Turborepo 등 모노레포 환경 경험이 있나요?
+    - pnpm 사용 경험 있음. 다만, npm 명령어를 pnpm으로 바꿔서 사용하는 정도
+    - 모노 레포 경험 없음. 항상 client, api 서버를 다른 레포로 관리
+- 테스트 코드 작성 경험: 구체적인 테스트 경험이 있나요?
+    - bun test를 이용한 유닛 테스트 학습 시작함. 없다고 봐도 무방.
+- 웹접근성/웹표준 경험: 관련 경험이 있나요?
+    - 웹 표준 경험 있음(이게 맞아?)
+        - html로 구조 잡고 css(tailwind)로 스타일링 (inline style 최소화)
+        - 브라우저 api 중 주요 브라우저들에 모두 호환되는 것만 사용
+    - 웹접근성 경험 있음(이거 말고 더 있나?)
+        - semantic tag 최대한 사용 (heading 목적은 h1~6 사용)
+        - img 태그 사용시 alt 속성 부여
+- A/B 테스트, 기능 플래그 경험: 관련 경험이 있나요?
+    - A/B 테스트 경험 있음
+        - Arbor The Tree
+            - pdf generation time comparison (typst vs react-pdf)
+            - while improving server response time
+    - 기능 플래그 경험 없음(이게 뭐야?)
