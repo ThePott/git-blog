@@ -1,39 +1,15 @@
+#import "./chapters/1_cover/index.typ": cover
+#import "./chapters/2_table_of_content/index.typ": table_of_content
 #import "./components/page-setting/index.typ": page-setting
-#import "./chapters/projects/arbor-the-tree/index.typ": chapter-project-arbor-the-tree
+#import "./chapters/2_projects/arbor-the-tree/index.typ": chapter-project-arbor-the-tree
 #import "./components/rem/index.typ": rem
 
 #show: page-setting
 
-= 하흥주
-== 프론트엔드 개발자
-=== 포트폴리오
+#cover
 
 #pagebreak()
-
-= 기술 스택
-
-== client
-- React with Vite, Bun
-- TanStack Query, Router, Table, Virtual
-- Zod
-- Zustand
-
-== api
-- Express.js
-- Prisma, PostgreSQL
-
-== deployment
-- Railway
-- S3, CloudFront
-
-== documentation
-- Typst
-
-#v(rem(2))
-= 주요 프로젝트
-== Arbor The Tree - 진도 및 오답 관리 시스템
-== IUA React UI - 디자인 라이브러리
-== Terminal To Blog - 자동 업데이트 블로그
+#table_of_content
 
 #pagebreak()
 #chapter-project-arbor-the-tree
