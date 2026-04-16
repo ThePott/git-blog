@@ -21,11 +21,7 @@
     - 문제 2: pdf 생성하기
         - 표면: pdf를 생성해야 한다. react-pdf를 쓰면 할 수 있다.
         - 본질: pdf 생성은 브라우저와 무관하다.
-    - 문제 3: 복잡한 공통 컴포넌트 상태 관리
-        - 표면: ContextAPI를 사용하면 굉장히
-        - 본질: useState이 문제다. useState으로 만든 상태를 넘겨줄 때마다 LSP로 타입을 보고 베껴야 한다. 상태를
-          넘겨준다면 zustand를 써라
-    - 문제 4: 서버 응답 시간 단축
+    - 문제 3: 서버 응답 시간 단축
         - 표면: 응답 속도가 느리다. 좋은 서버를 쓰면 속도가 빨라질텐데
         - 본질: 문제의 원인은 Neon이다. Neon을 교체해야 한다.
 
@@ -103,7 +99,7 @@
 | 영역   | 해결하려는 문제             | 선택                     |
 | ------ | --------------------------- | ------------------------ |
 | 렌더링 | DOM 직접 조작의 복잡함      | React                    |
-| 상태   | 서버/클라이언트 상태 혼재   | TanStack Query + Zustand |
+| 상태   | 복잡한 상태 관리            | TanStack Query + Zustand |
 | 타입   | 런타임 타입 부재            | Zod                      |
 | DB     | 동기화 환경별 스키마 불일치 | Prisma                   |
 | 성능   | 외부 DB cold start          | Railway 내부 배포        |
@@ -179,16 +175,6 @@
         - fonts
     - typst compiler는 npm install로 설치할 수 없었기에 railway build script를 bash로 작성하여 npm install 전에 curl로
       설치되게 함
-
-### trouble shoot: zustand store per component
-
-- 복잡한 공통 컴포넌트를 만들 땐 부모의 상태를 자식에게 매번 넘겨주는 것이 불편하다
-- 이를 해결하기 위해서 Context API를 사용했으나, 이 또한 불편함 << 구체적으로 뭐가 불편하지? 상태를 하나 만들 때마다
-  번거로운 작업을 해야 함 (3열로 만들어 각 경우 도식화하기 - 간단한 예시 코드 보이기)
-    - 외부로부터 상태를 props로 받을 때
-    - useState을 이용해 상태를 만들 때
-- zustand local store 만든 방법 설명 (기존 것 유지해도 되겠다.)
-    - 도표의 세로 간격만 더 늘려서 화살표가 여유롭게 보이게 하자
 
 ### trouble shoot: reducing latency
 
