@@ -1,4 +1,4 @@
-# @fieldParentPrt
+# @fieldParentPtr
 
 - https://ziglang.org/documentation/master/#fieldParentPtr
 
