@@ -1,4 +1,5 @@
 #let performance = [
+    #pagebreak()
     Arbor The Tree로 해결한 과제
 
     3. 성능 최적화
@@ -72,6 +73,22 @@
 
     - 진단 및 해결 시도
         - Railway region 변경: 달라지지 않음
-            -
+        - Neon은 설정 불가
+            - 무료 플랜은 cold start 강제
+            - region은 N. Virginia 하나
 
+    #pagebreak()
+    Arbor The Tree로 해결한 과제 3. 성능 최적화
+
+    b. 서버 응답 시간 단축
+
+    해결: PostgreSQL DB on Railway
+
+    - DB 서버를 PostgreSQL로 Railway에 직접 배포
+        - Railway는 상시 가동 인스턴스로 cold start 없음
+    - API 서버와 DB 서버의 network latency 최소화
+        - 모두 한국과 제일 가까운 Singpore region으로 설정
+        - 같은 private network로 설정하여 roundtrip latency 단축
+    - 성과
+        - 문제집 생성 시간 315 ms로 단축 (22배 향상)
 ]

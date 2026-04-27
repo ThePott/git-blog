@@ -1,4 +1,5 @@
 #let table_of_content = [
+    #pagebreak()
     Arbot The Tree 진도 관리 시스템으로
 
     해결하려고 한 문제

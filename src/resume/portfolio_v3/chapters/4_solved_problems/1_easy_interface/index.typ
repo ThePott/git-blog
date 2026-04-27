@@ -1,4 +1,5 @@
 #let easy_interface = [
+    #pagebreak()
     Arbor The Tree로 해결한 과제
 
     1. 쉬운 사용법

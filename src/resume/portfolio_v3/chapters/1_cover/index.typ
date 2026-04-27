@@ -8,7 +8,7 @@
 
     010-6332-9205
 
-    nusilite@gmail.com
+    `nusilite@gmail.com`
 
     https://github.com/thepott
 ]

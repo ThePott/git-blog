@@ -1,4 +1,5 @@
 #let cover = [
+    #pagebreak()
     Arbor The Tree 진도 관리 시스템으로
 
     해결한 과제

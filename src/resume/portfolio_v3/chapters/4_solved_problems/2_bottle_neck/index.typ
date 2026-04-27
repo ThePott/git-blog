@@ -1,4 +1,5 @@
-#let bootle_neck = [
+#let bottle_neck = [
+    #pagebreak()
     Arbor The Tree로 해결한 과제
 
     2. 병목 현상 해결
@@ -54,5 +55,5 @@
     - 문제 발생: 가상 스크롤 적용시, 가장 바깥의 부모가 한 덩어리로 가상화됨
         - 거대한 부모가 통째로 mount되거나 unmount됨. 눈에 보이는 한 줄 씩 가상화가 불가능
     - 문제의 원인: 눈에 보이는 대로 줄별로 끊어지지 않은 다층 구조
-    - 해결: 다층 구조를 눈에 보이는 대로 title, subtitle, pagenagedQuestions로 평탄화, 이후 가상 스크롤
+    - 해결: 다층 구조를 눈에 보이는 줄 별로 평탄화, 이후 가상 스크롤
 ]
