@@ -1,29 +1,42 @@
+#import "../../../components/rem/index.typ": rem
+#import "../../../components/title-section/index.typ": title-section
+
+
 #let performance = [
     #pagebreak()
-    Arbor The Tree로 해결한 과제
+    = Arbor The Tree로 해결한 과제
 
-    3. 성능 최적화
+    #v(rem(4))
+    == 3. 성능 최적화
 
-    a. 서버 사이드 PDF 생성
+    #v(rem(4))
+    === a. 서버 사이드 PDF 생성
+    #v(rem(2))
     - PDF 생성 방법과 그 문제
+    #v(rem(2))
     - 문제의 본질 파악과 그 해결
+    #v(rem(2))
     - Troubleshooting: `npm install`로 설치 안 되는 것들 존재
 
-    b. 서버 응답 시간 단축
+    #v(rem(4))
+    === b. 서버 응답 시간 단축
+    #v(rem(2))
     - 원인 진단: region, cold start
+    #v(rem(2))
     - 해결과 그 성과
 
 
     #pagebreak()
-    Arbor The Tree로 해결한 과제 3. 성능 최적화
-
-    a. 서버 사이드 PDF 생성
-
-    PDF 생성 방법과 그 문제
+    #title-section(
+        (level: 1, size: "sm", title: "Arbor The Tree로 해결한 과제 3. 성능 최적화"),
+        (level: 1, size: "sm", title: "a. 서버 사이드 PDF 생성"),
+        (level: 3, size: "lg", title: "PDF 생성 방법과 그 문제"),
+    )
 
     - 배경: 오답과제를 pdf로 생성 후 출력 후 숙제로 부여
         - 학생들의 오답의 쪽, 문제 번호가 적혀있는 빈 학습지 제작해야
         - 여러 학생 것을 한 번에 제작한다면 100쪽 이상도 가능
+
     - 후보 기술 스택
         - React PDF(client side)
             - 브라우저 메인 스레드 점유

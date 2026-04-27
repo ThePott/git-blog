@@ -1,13 +1,18 @@
+#import "../../components/title-section/index.typ": title-section
+#import "../../components/rem/index.typ": rem
+
 #let table_of_content = [
     #pagebreak()
-    Arbot The Tree 진도 관리 시스템으로
+    = Arbor The Tree 진도 관리 시스템으로
 
-    해결하려고 한 문제
+    == 해결하려고 한 문제
+
     1. 입시학원의 문제
     2. 구글 시트 + 파이썬 시스템의 문제
     3. 고객의 요구사항
 
-    해결한 과제
+    == 해결한 과제
+
     1. 쉬운 사용법
         - 칸반 진도표
         - 그리드 인풋

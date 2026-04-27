@@ -2,6 +2,7 @@
 
 #let size-to-pt = (
     sm: rem(1.25),
+    md: rem(1.5),
     lg: rem(1.75),
 )
 #let title-section(..args) = {

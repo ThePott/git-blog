@@ -4,10 +4,13 @@
 #import "./chapters/4_solved_problems/index.typ": solved_problems
 #import "./chapters/5_additional_infos/index.typ": additional_info
 
+#import "./test_page/index.typ": test_page
+
 #import "./components/page-setting/index.typ": page-setting
 
-#show: page-setting 
+#show: page-setting
 
+#test_page
 #cover
 #table_of_content
 #problems_to_solve
