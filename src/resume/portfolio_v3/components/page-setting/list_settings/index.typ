@@ -1,6 +1,6 @@
 #import "../../rem/index.typ": rem
 
-#let list_setting(content) = {
+#let list_settings(content) = {
     let check_is_new_list = state("is_new_list", true)
     let list_depth = counter("list-depth")
 

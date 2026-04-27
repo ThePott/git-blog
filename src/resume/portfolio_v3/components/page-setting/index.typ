@@ -1,5 +1,5 @@
 #import "../rem/index.typ": rem
-#import "./list_setting/index.typ": list_setting
+#import "./list_settings/index.typ": list_settings
 
 #let page-setting(content) = {
     set text(
