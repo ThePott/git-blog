@@ -25,7 +25,7 @@
 
     show link: underline
 
-    show: list_setting
+    show: list_settings
 
     content
 }
