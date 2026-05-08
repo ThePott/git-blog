@@ -10,7 +10,6 @@
 
 #show: page-setting
 
-#test_page
 #cover
 #table_of_content
 #problems_to_solve
