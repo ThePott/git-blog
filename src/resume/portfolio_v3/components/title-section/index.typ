@@ -14,5 +14,4 @@
         stack(dir: ttb, text(size: size, weight: "bold", title))
         v(rem(0.5))
     }
-    v(rem(2))
 }

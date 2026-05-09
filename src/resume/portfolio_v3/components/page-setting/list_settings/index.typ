@@ -5,14 +5,14 @@
     // Helper: get style based on depth
     let get_style(depth) = {
         let bottom_margin = rem(0)
-        if depth == 0 { bottom_margin = rem(2) }
+        if depth == 0 { bottom_margin = rem(1.5) }
 
         let size = rem(1)
         if depth == 0 { size = rem(1.2) }
 
         let weight = "regular"
         if depth == 0 { weight = "bold" }
-        if depth == 1 { weight = "bold" }
+        if depth == 1 { weight = "semibold" }
 
         let top_margin = rem(0.5)
         if depth == 0 { top_margin = rem(4) }
