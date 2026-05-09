@@ -1,53 +1,60 @@
 #import "../../rem/index.typ": rem
 
+// unified depth counter for both enum and list
 #let list_settings(content) = {
-    // NOTE: 여기는 연속된 같은 레벨이 한 리스트가 된다
-    // NOTE: level 1끼리, level 1 안의 level 2끼리
-    // state("is_first", true)
-
-    show list: it => {
-        counter("list-depth").step()
-        let depth = counter("list-depth").get().first()
-        // if depth == 0 { state("is_first").update(true) }
-
+    // Helper: get style based on depth
+    let get_style(depth) = {
         let bottom_margin = rem(0)
-        if depth == 0 { bottom_margin = rem(4) }
+        if depth == 0 { bottom_margin = rem(2) }
 
         let size = rem(1)
-        if depth == 0 { size = rem(1.5) }
+        if depth == 0 { size = rem(1.2) }
 
         let weight = "regular"
         if depth == 0 { weight = "bold" }
         if depth == 1 { weight = "bold" }
 
-        set text(size: size, weight: weight)
+        let top_margin = rem(0.5)
+        if depth == 0 { top_margin = rem(4) }
+        if depth == 1 { top_margin = rem(1) }
 
-        [
-            #it
-            #v(bottom_margin)
-        ]
-
-        counter("list-depth").update(d => d - 1)
+        (bottom_margin: bottom_margin, size: size, weight: weight, top_margin: top_margin)
     }
 
-    // NOTE: 여기서는 패딩만
-    show list.item: it => {
+    let enum_list_it(it) = {
         context {
-            let is_first = state("is_first").get()
-            state("is_first").update(false)
+            counter("unified-depth").step()
+            let depth = counter("unified-depth").get().first()
+            let style = get_style(depth)
 
-            let depth = counter("list-depth").get().first()
-
-            let top_margin = rem(0.5)
-            if depth == 0 { top_margin = rem(4) }
-            if depth == 1 { top_margin = rem(1) }
+            set text(size: style.size, weight: style.weight)
 
             [
-                #v(top_margin)
+                #it
+                #v(style.bottom_margin)
+            ]
+
+            counter("unified-depth").update(d => d - 1)
+        }
+    }
+
+    let enum_list_item_it(it) = {
+        context {
+            let depth = counter("unified-depth").get().first()
+            let style = get_style(depth)
+
+            [
+                #v(style.top_margin)
                 #it
             ]
         }
     }
+
+    show enum: it => enum_list_it(it)
+    show enum.item: it => enum_list_item_it(it)
+
+    show list: it => enum_list_it(it)
+    show list.item: it => enum_list_item_it(it)
 
     content
 }
