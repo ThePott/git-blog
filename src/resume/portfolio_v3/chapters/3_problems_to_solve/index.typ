@@ -27,7 +27,7 @@
                 - 빠른 반응 속도 요구
                 - 쉬운 조작법 요구
         ],
-        [],
+        [], // NOTE: MUST BE BLANK
     )
 
     #pagebreak()

@@ -18,7 +18,7 @@
                     - Troubleshooting: 다층 구조 가상 스크롤
             ]
         ],
-        [],
+        [], // NOTE: MUST BE BLANK
     )
 
     #pagebreak()

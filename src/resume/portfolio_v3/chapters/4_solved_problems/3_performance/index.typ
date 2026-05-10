@@ -22,7 +22,7 @@
                     - 해결과 그 성과
             ]
         ],
-        [],
+        [], // NOTE: MUST BE BLANK
     )
 
     #pagebreak()
