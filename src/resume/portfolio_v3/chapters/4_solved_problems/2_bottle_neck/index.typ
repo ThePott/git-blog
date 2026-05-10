@@ -1,22 +1,26 @@
 #import "../../../components/rem/index.typ": rem
 #import "../../../components/title-section/index.typ": title-section
+#import "../../../components/override-enum-numbering/index.typ": override-enum-numbering
 
 #let bottle_neck = [
     #pagebreak()
-    = Arbor The Tree로 해결한 과제
+    #title-section(
+        (level: 1, size: "sm", title: "Arbor The Tree로 해결한 과제"),
+        (level: 2, size: "lg", title: "2. 병목 현상 해결"),
+    )
 
-    == 2. 병목 현상 해결
-
-    === a. 오답 체크 결과 자동 반영
-    - 병목 현상 발생 지점과 그 해결
-    - UI 벤치마크: 호텔 예약의 다중 선택 UI
-    - Troubleshooting: 다층 구조 가상 스크롤
+    #override-enum-numbering(numbering: "a.")[
+        1. 오답 체크 결과 자동 반영
+            - 병목 현상 발생 지점과 그 해결
+            - UI 벤치마크: 호텔 예약의 다중 선택 UI
+            - Troubleshooting: 다층 구조 가상 스크롤
+    ]
 
 
     #pagebreak()
     #title-section(
         (level: 1, size: "sm", title: "Arbor The Tree로 해결한 과제 2. 병목 현상 해결"),
-        (level: 1, size: "sm", title: "a. 칸반 진도표"),
+        (level: 2, size: "sm", title: "a. 오답 체크 결과 자동 반영"),
         (level: 3, size: "lg", title: "병목 현상 발생 지점과 그 해결"),
     )
 
@@ -34,7 +38,7 @@
     #pagebreak()
     #title-section(
         (level: 1, size: "sm", title: "Arbor The Tree로 해결한 과제 2. 병목 현상 해결"),
-        (level: 1, size: "sm", title: "a. 오답 체크 결과 자동 반영"),
+        (level: 2, size: "sm", title: "a. 오답 체크 결과 자동 반영"),
         (level: 3, size: "lg", title: "UI 벤치마크: 호텔 예약의 다중 선택 UI"),
     )
 
@@ -42,7 +46,6 @@
         - 한 수업 당 약 40문제 오답 체크
         - 기존 방식인 한 줄에 한 문제 체크로는 스크롤을 너무 많이 해야 함
 
-    #v(rem(4))
     - 아이디어: 호텔 예약의 다중 선택 UI
         - 그리드 체크박스를 만들고 시작과 끝만 선택하면 그 사이도 자동 선택되게
         - 이후 단일 선택으로 다른 상태 기록할 수 있게
@@ -51,7 +54,7 @@
     #pagebreak()
     #title-section(
         (level: 1, size: "sm", title: "Arbor The Tree로 해결한 과제 2. 병목 현상 해결"),
-        (level: 1, size: "sm", title: "a. 오답 체크 결과 자동 반영"),
+        (level: 2, size: "sm", title: "a. 오답 체크 결과 자동 반영"),
         (level: 3, size: "lg", title: "Troubleshooting: 다층 구조 가상 스크롤"),
     )
 

@@ -1,35 +1,31 @@
 #import "../../../components/rem/index.typ": rem
 #import "../../../components/title-section/index.typ": title-section
+#import "../../../components/override-enum-numbering/index.typ": override-enum-numbering
 
 
 #let performance = [
     #pagebreak()
-    = Arbor The Tree로 해결한 과제
+    #title-section(
+        (level: 1, size: "sm", title: "Arbor The Tree로 해결한 과제"),
+        (level: 2, size: "lg", title: "3. 성능 최적화"),
+    )
 
-    #v(rem(4))
-    == 3. 성능 최적화
+    #override-enum-numbering(numbering: "a.")[
+        1. 서버 사이드 PDF 생성
+            - PDF 생성 방법과 그 문제
+            - 문제의 본질 파악과 그 해결
+            - Troubleshooting: `npm install`로 설치 안 되는 것들 존재
 
-    #v(rem(4))
-    === a. 서버 사이드 PDF 생성
-    #v(rem(2))
-    - PDF 생성 방법과 그 문제
-    #v(rem(2))
-    - 문제의 본질 파악과 그 해결
-    #v(rem(2))
-    - Troubleshooting: `npm install`로 설치 안 되는 것들 존재
-
-    #v(rem(4))
-    === b. 서버 응답 시간 단축
-    #v(rem(2))
-    - 원인 진단: region, cold start
-    #v(rem(2))
-    - 해결과 그 성과
+        2. 서버 응답 시간 단축
+            - 원인 진단: region, cold start
+            - 해결과 그 성과
+    ]
 
 
     #pagebreak()
     #title-section(
         (level: 1, size: "sm", title: "Arbor The Tree로 해결한 과제 3. 성능 최적화"),
-        (level: 1, size: "sm", title: "a. 서버 사이드 PDF 생성"),
+        (level: 2, size: "sm", title: "a. 서버 사이드 PDF 생성"),
         (level: 3, size: "lg", title: "PDF 생성 방법과 그 문제"),
     )
 
@@ -47,12 +43,11 @@
             - LaTex보다 빠르고 문법이 쉬운 문서 조판 언어
 
     #pagebreak()
-    Arbor The Tree로 해결한 과제 3. 성능 최적화
-
-    a. 서버 사이드 PDF 생성
-
-    문제의 본질 파악과 그 해결
-
+    #title-section(
+        (level: 1, size: "sm", title: "Arbor The Tree로 해결한 과제 3. 성능 최적화"),
+        (level: 2, size: "sm", title: "a. 서버 사이드 PDF 생성"),
+        (level: 3, size: "lg", title: "문제의 본질 파악과 그 해결"),
+    )
     - 문제의 본질: PDF는 문서다
         - 브라우저와도, html과도 무관하다
 
@@ -69,34 +64,33 @@
 
 
     #pagebreak()
-    Arbor The Tree로 해결한 과제 3. 성능 최적화
-
-    b. 서버 응답 시간 단축
-
-    원인 진단: region, cold start
+    #title-section(
+        (level: 1, size: "sm", title: "Arbor The Tree로 해결한 과제 3. 성능 최적화"),
+        (level: 2, size: "sm", title: "a. 서버 사이드 PDF 생성"),
+        (level: 3, size: "lg", title: "문제의 본질 파악과 그 해결"),
+    )
 
     - 시스템 구성
         - API 서버: Railway
         - DB 서버: Neon(PostgreSQL)
 
-    - 문제 발생: 문제집 등록 시, 7초 가량이 걸림
-        - 연속적으로 요청 보낼 시, 응답 시간이 4~5초로 줄어듦
+    - 현상 관찰: 아주 긴 최초 응답 시간, 다소 짧아진 그 이후 응답 시간
+        - 연속 요청 시, 최초에는 7초 가량, 이후에는 4\~5초 가량 소요
         - 최초의 긴 응답 시간은 cold start 의심됨
         - 두 번째 이후에도 긴 응답 시간은 region 자체가 먼 것이 의심됨
 
     - 진단 및 해결 시도
         - Railway region 변경: 달라지지 않음
-        - Neon은 설정 불가
+        - Neon은 설정 변경 불가
             - 무료 플랜은 cold start 강제
             - region은 N. Virginia 하나
 
     #pagebreak()
-    Arbor The Tree로 해결한 과제 3. 성능 최적화
-
-    b. 서버 응답 시간 단축
-
-    해결: PostgreSQL DB on Railway
-
+    #title-section(
+        (level: 1, size: "sm", title: "Arbor The Tree로 해결한 과제 3. 성능 최적화"),
+        (level: 2, size: "sm", title: "a. 서버 사이드 PDF 생성"),
+        (level: 3, size: "lg", title: "해결: PostgreSQL DB on Railway"),
+    )
     - DB 서버를 PostgreSQL로 Railway에 직접 배포
         - Railway는 상시 가동 인스턴스로 cold start 없음
     - API 서버와 DB 서버의 network latency 최소화
