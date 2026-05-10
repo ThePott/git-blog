@@ -1,7 +1,25 @@
 #import "@preview/shadowed:0.3.0": shadow
 #import "../rem/index.typ": rem
 
-#let shadowed-round-box(title: (), subtitle-array: (), content: content) = [
+#let shadowed-round-box(content) = [
+    #shadow(blur: 12pt, fill: rgb(89, 85, 101, 50%), radius: 12pt, dy: 12pt, spread: -6pt)[
+        #shadow(blur: 24pt, fill: rgb(89, 85, 101, 25%), radius: 24pt, dy: 24pt, spread: -12pt)[
+            #box(
+                width: 100%,
+                radius: rem(1),
+                clip: true,
+                fill: white,
+                inset: rem(2),
+            )[
+                #align(center)[
+                    #content
+                ]
+            ]
+        ]
+    ]
+]
+
+#let shadowed-round-box-with-figure(title: (), subtitle-array: (), content: content) = [
     #figure(
         caption: [
             #title
@@ -20,8 +38,9 @@
                         width: 100%,
                         radius: rem(1),
                         clip: true,
-                        content,
-                    )
+                    )[
+                        #content
+                    ]
                 ]
             ]
             #v(rem(1.5))
