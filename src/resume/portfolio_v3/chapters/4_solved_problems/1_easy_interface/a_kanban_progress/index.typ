@@ -1,5 +1,10 @@
 #import "../../../../components/title-section/index.typ": title-section
 #import "../../../../components/two-column-section/index.typ": two-column-section
+#import "./diagram_1_problem_of_original_progress/index.typ": diagram_1_problem_of_original_progress
+#import "./diagram_2_solution_for_original_progress/index.typ": diagram_2_solution_for_original_progress
+#import "./diagram_3_troubleshoot_dropdown_cutoff_over_scrollbar/index.typ": (
+    diagram_3_troubleshoot_dropdown_cutoff_over_scrollbar,
+)
 
 
 #let a_kanban_progress = [
@@ -21,7 +26,9 @@
                 2. 당일 수업과 무관한 것이 페이지의 대부분
                 3. 조건부 포매팅 규칙을 지켜야만 사용 가능
         ],
-        [],
+        [
+            #diagram_1_problem_of_original_progress
+        ],
     )
 
     #pagebreak()
@@ -37,7 +44,9 @@
             - 드롭다운에서 묶음 상태 설정 (숙제, 오늘, 해제)
             - 당일 수업에 필요한 부분만 요약 보기
         ],
-        [],
+        [
+            #diagram_2_solution_for_original_progress
+        ],
     )
 
     #pagebreak()
@@ -54,6 +63,8 @@
                 - `createPortal`을 이용해 컴포넌트를 `document.body`로 빼냄
                 - `position: fixed` 하에서의 위치는 Floating UI 라이브러리로 계산
         ],
-        [],
+        [
+            #diagram_3_troubleshoot_dropdown_cutoff_over_scrollbar
+        ],
     )
 ]

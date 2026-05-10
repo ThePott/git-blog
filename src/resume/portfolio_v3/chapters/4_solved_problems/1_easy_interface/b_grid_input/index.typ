@@ -1,5 +1,10 @@
 #import "../../../../components/title-section/index.typ": title-section
 #import "../../../../components/two-column-section/index.typ": two-column-section
+#import "./diagram_1_original_book_write_problem/index.typ": diagram_1_original_book_write_problem
+#import "./diagram_2_library_candidats/index.typ": diagram_2_library_candidats
+#import "./diagram_3_essence_of_problem/index.typ": diagram_3_essence_of_problem
+#import "./diagram_4_trobleshoot_validation/index.typ": diagram_4_trobleshoot_validation
+#import "./diagram_5_keyboard_navigation/index.typ": diagram_5_keyboard_navigation
 
 #let b_grid_input = [
     #pagebreak()
@@ -19,7 +24,9 @@
                 - 유효성 검사 부재
                     - 아르바이트생에게 맡기기에 걱정됨
         ],
-        [],
+        [
+            #diagram_1_original_book_write_problem
+        ],
     )
 
     #pagebreak()
@@ -40,7 +47,9 @@
                     - Headless UI Library
                     - 모든 셀, 행, 열의 데이터에 언제든 접근 가능
         ],
-        [],
+        [
+            #diagram_2_library_candidats
+        ],
     )
 
     #pagebreak()
@@ -59,7 +68,9 @@
             - 결론: TanStack Table로 직접 구현
                 - 테이블 형식이 필요한 것이지 스프레드 시트가 필요한 것이 아니다
         ],
-        [],
+        [
+            #diagram_3_essence_of_problem
+        ],
     )
 
     #pagebreak()
@@ -78,7 +89,9 @@
                 - TanStack Virtual로 돔 노드 최소화
                 - 업데이트 시간을 20.28ms에서 2.28ms로 89% 단축 (`performance.time`으로 측정)
         ],
-        [],
+        [
+            #diagram_4_trobleshoot_validation
+        ],
     )
 
     #pagebreak()
@@ -99,6 +112,8 @@
                 3. querySelector로 목적지 돔 노드 선택
                 4. focus
         ],
-        [],
+        [
+            #diagram_5_keyboard_navigation
+        ],
     )
 ]

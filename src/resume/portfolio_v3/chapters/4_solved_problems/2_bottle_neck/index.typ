@@ -2,6 +2,9 @@
 #import "../../../components/title-section/index.typ": title-section
 #import "../../../components/override-enum-numbering/index.typ": override-enum-numbering
 #import "../../../components/two-column-section/index.typ": two-column-section
+#import "./diagram_1_where_bottleneck_is/index.typ": diagram_1_where_bottleneck_is
+#import "./diagram_2_ui_benchmark/index.typ": diagram_2_ui_benchmark
+#import "./diagram_3_troubleshoot_nested_virtual_scroll/index.typ": diagram_3_troubleshoot_nested_virtual_scroll
 
 #let bottle_neck = [
     #pagebreak()
@@ -39,7 +42,9 @@
                 2. DB에 오답 체크 저장 -> 묶음 완료 여부 업데이트
                 3. 진도표 캐시 무효화 -> 묶음 완료 여부 업데이트 된 진도표 fetch
         ],
-        [],
+        [
+            #diagram_1_where_bottleneck_is
+        ],
     )
 
     #pagebreak()
@@ -57,7 +62,9 @@
                 - 그리드 체크박스에서 시작과 끝 선택 -> 그 사이도 자동 선택
                 - 이후 단일 선택으로 다른 상태 기록할 수 있게
         ],
-        [],
+        [
+            #diagram_2_ui_benchmark
+        ],
     )
 
     #pagebreak()
@@ -77,6 +84,8 @@
             - 원인: 컴포넌트의 다층 구조와 시각적 줄 단위 구조의 불일치
             - 해결: 다층 구조를 줄 단위로 평탄화, 이후 가상 스크롤
         ],
-        [],
+        [
+            #diagram_3_troubleshoot_nested_virtual_scroll
+        ],
     )
 ]
