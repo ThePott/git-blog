@@ -11,7 +11,7 @@
 ]
 
 #let cover = [
-    #box(width: 100%, height: 95%)[
+    #box(width: 100%, height: 98%)[
         #place(center, dy: 40%)[
             #stack(dir: ttb)[
                 #v(rem(0))
