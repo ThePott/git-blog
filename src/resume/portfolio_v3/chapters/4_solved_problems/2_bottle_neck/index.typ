@@ -23,7 +23,7 @@
 
     #pagebreak()
     #title-section(
-        (level: 1, size: "sm", title: "Arbor The Tree로 해결한 과제 2. 병목 현상 해결"),
+        (level: 1, size: "sm", title: "Arbor The Tree로 해결한 과제: 2. 병목 현상 해결"),
         (level: 2, size: "md", title: "a. 오답 체크 결과 자동 반영"),
         (level: 3, size: "lg", title: "병목 현상 발생 지점과 그 해결"),
     )
@@ -44,7 +44,7 @@
 
     #pagebreak()
     #title-section(
-        (level: 1, size: "sm", title: "Arbor The Tree로 해결한 과제 2. 병목 현상 해결"),
+        (level: 1, size: "sm", title: "Arbor The Tree로 해결한 과제: 2. 병목 현상 해결"),
         (level: 2, size: "md", title: "a. 오답 체크 결과 자동 반영"),
         (level: 3, size: "lg", title: "UI 벤치마크: 호텔 예약의 다중 선택 UI"),
     )
@@ -62,7 +62,7 @@
 
     #pagebreak()
     #title-section(
-        (level: 1, size: "sm", title: "Arbor The Tree로 해결한 과제 2. 병목 현상 해결"),
+        (level: 1, size: "sm", title: "Arbor The Tree로 해결한 과제: 2. 병목 현상 해결"),
         (level: 2, size: "md", title: "a. 오답 체크 결과 자동 반영"),
         (level: 3, size: "lg", title: "Troubleshooting: 다층 구조 가상 스크롤"),
     )

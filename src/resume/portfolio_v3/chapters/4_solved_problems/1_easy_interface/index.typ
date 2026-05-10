@@ -29,7 +29,7 @@
 
     #pagebreak()
     #title-section(
-        (level: 1, size: "sm", title: "Arbor The Tree로 해결한 과제 1. 쉬운 사용법"),
+        (level: 1, size: "sm", title: "Arbor The Tree로 해결한 과제: 1. 쉬운 사용법"),
         (level: 1, size: "md", title: "a. 칸반 진도표"),
         (level: 3, size: "lg", title: "기존 진도표의 문제"),
     )
@@ -50,7 +50,7 @@
 
     #pagebreak()
     #title-section(
-        (level: 1, size: "sm", title: "Arbor The Tree로 해결한 과제 1. 쉬운 사용법"),
+        (level: 1, size: "sm", title: "Arbor The Tree로 해결한 과제: 1. 쉬운 사용법"),
         (level: 1, size: "md", title: "a. 칸반 진도표"),
         (level: 3, size: "lg", title: "기존 진도표의 문제의 해결책"),
     )
@@ -66,7 +66,7 @@
 
     #pagebreak()
     #title-section(
-        (level: 1, size: "sm", title: "Arbor The Tree로 해결한 과제 1. 쉬운 사용법"),
+        (level: 1, size: "sm", title: "Arbor The Tree로 해결한 과제: 1. 쉬운 사용법"),
         (level: 1, size: "md", title: "a. 칸반 진도표"),
         (level: 3, size: "lg", title: "Troubleshooting: 드롭다운이 스크롤바에 잘림"),
     )
@@ -83,7 +83,7 @@
 
     #pagebreak()
     #title-section(
-        (level: 1, size: "sm", title: "Arbor The Tree로 해결한 과제 1. 쉬운 사용법"),
+        (level: 1, size: "sm", title: "Arbor The Tree로 해결한 과제: 1. 쉬운 사용법"),
         (level: 1, size: "md", title: "b. 그리드 인풋"),
         (level: 3, size: "lg", title: "기존 문제집 등록 과정과 그 문제"),
     )
@@ -103,7 +103,7 @@
 
     #pagebreak()
     #title-section(
-        (level: 1, size: "sm", title: "Arbor The Tree로 해결한 과제 1. 쉬운 사용법"),
+        (level: 1, size: "sm", title: "Arbor The Tree로 해결한 과제: 1. 쉬운 사용법"),
         (level: 1, size: "md", title: "b. 그리드 인풋"),
         (level: 3, size: "lg", title: "후보 기술 스택"),
     )
@@ -124,7 +124,7 @@
 
     #pagebreak()
     #title-section(
-        (level: 1, size: "sm", title: "Arbor The Tree로 해결한 과제 1. 쉬운 사용법"),
+        (level: 1, size: "sm", title: "Arbor The Tree로 해결한 과제: 1. 쉬운 사용법"),
         (level: 1, size: "md", title: "b. 그리드 인풋"),
         (level: 3, size: "lg", title: "문제의 본질"),
     )
@@ -143,7 +143,7 @@
 
     #pagebreak()
     #title-section(
-        (level: 1, size: "sm", title: "Arbor The Tree로 해결한 과제 1. 쉬운 사용법"),
+        (level: 1, size: "sm", title: "Arbor The Tree로 해결한 과제: 1. 쉬운 사용법"),
         (level: 1, size: "md", title: "b. 그리드 인풋"),
         (level: 3, size: "lg", title: "Troubleshooting: 유효성 검사 성능 개선"),
     )
@@ -162,7 +162,7 @@
 
     #pagebreak()
     #title-section(
-        (level: 1, size: "sm", title: "Arbor The Tree로 해결한 과제 1. 쉬운 사용법"),
+        (level: 1, size: "sm", title: "Arbor The Tree로 해결한 과제: 1. 쉬운 사용법"),
         (level: 1, size: "md", title: "b. 그리드 인풋"),
         (level: 3, size: "lg", title: "Troubleshooting: 키보드 내비게이션"),
     )

@@ -27,7 +27,7 @@
 
     #pagebreak()
     #title-section(
-        (level: 1, size: "sm", title: "Arbor The Tree로 해결한 과제 3. 성능 최적화"),
+        (level: 1, size: "sm", title: "Arbor The Tree로 해결한 과제: 3. 성능 최적화"),
         (level: 2, size: "md", title: "a. 서버 사이드 PDF 생성"),
         (level: 3, size: "lg", title: "PDF 생성 방법과 그 문제"),
     )
@@ -50,7 +50,7 @@
 
     #pagebreak()
     #title-section(
-        (level: 1, size: "sm", title: "Arbor The Tree로 해결한 과제 3. 성능 최적화"),
+        (level: 1, size: "sm", title: "Arbor The Tree로 해결한 과제: 3. 성능 최적화"),
         (level: 2, size: "md", title: "a. 서버 사이드 PDF 생성"),
         (level: 3, size: "lg", title: "문제의 본질 파악과 그 해결"),
     )
@@ -73,7 +73,7 @@
 
     #pagebreak()
     #title-section(
-        (level: 1, size: "sm", title: "Arbor The Tree로 해결한 과제 3. 성능 최적화"),
+        (level: 1, size: "sm", title: "Arbor The Tree로 해결한 과제: 3. 성능 최적화"),
         (level: 2, size: "md", title: "a. 서버 사이드 PDF 생성"),
         (level: 3, size: "lg", title: "문제의 본질 파악과 그 해결"),
     )
@@ -97,7 +97,7 @@
 
     #pagebreak()
     #title-section(
-        (level: 1, size: "sm", title: "Arbor The Tree로 해결한 과제 3. 성능 최적화"),
+        (level: 1, size: "sm", title: "Arbor The Tree로 해결한 과제: 3. 성능 최적화"),
         (level: 2, size: "md", title: "a. 서버 사이드 PDF 생성"),
         (level: 3, size: "lg", title: "해결: PostgreSQL DB on Railway"),
     )
