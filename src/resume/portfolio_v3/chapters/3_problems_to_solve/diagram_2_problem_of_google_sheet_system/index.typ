@@ -1,9 +1,8 @@
-#import "@preview/fletcher:0.5.8" as fletcher: diagram, edge, node
 #import "../../../components/rem/index.typ": rem
+#import "../../../components/shadowed-round-box/index.typ": shadowed-round-box
 #import "../../../components/fletcher_component/index.typ": (
     arrow, black_node, blank_node, diagram, dotted_line, line, white_node,
 )
-#import "../../../components/shadowed-round-box/index.typ": shadowed-round-box
 
 #let diagram_2_problem_of_google_sheet_system = [
     #shadowed-round-box[
