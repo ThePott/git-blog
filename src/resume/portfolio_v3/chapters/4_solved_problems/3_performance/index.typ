@@ -25,15 +25,12 @@
         [],
     )
 
-
-
     #pagebreak()
     #title-section(
         (level: 1, size: "sm", title: "Arbor The Tree로 해결한 과제 3. 성능 최적화"),
         (level: 2, size: "md", title: "a. 서버 사이드 PDF 생성"),
         (level: 3, size: "lg", title: "PDF 생성 방법과 그 문제"),
     )
-
     #two-column-section(
         [
             - 배경: 오답과제를 pdf로 생성 후 출력 후 숙제로 부여
@@ -50,7 +47,6 @@
         ],
         [],
     )
-
 
     #pagebreak()
     #title-section(
@@ -75,8 +71,6 @@
         [],
     )
 
-
-
     #pagebreak()
     #title-section(
         (level: 1, size: "sm", title: "Arbor The Tree로 해결한 과제 3. 성능 최적화"),
@@ -88,10 +82,10 @@
             - 시스템 구성
                 - API 서버: Railway
                 - DB 서버: Neon(PostgreSQL)
-            - 현상 관찰: 아주 긴 최초 응답 시간, 다소 짧아진 그 이후 응답 시간
+            - 현상 관찰: 아주 긴 최초 응답 시간, 이후의 긴 응답 시간
                 - 연속 요청 시, 최초에는 7초 가량, 이후에는 4\~5초 가량 소요
                 - 최초의 긴 응답 시간은 cold start 의심됨
-                - 두 번째 이후에도 긴 응답 시간은 region 자체가 먼 것이 의심됨
+                - 최초 응답 이후에도 긴 응답 시간은 region 자체가 먼 것이 의심됨
             - 진단 및 해결 시도
                 - Railway region 변경: 달라지지 않음
                 - Neon은 설정 변경 불가
@@ -100,7 +94,6 @@
         ],
         [],
     )
-
 
     #pagebreak()
     #title-section(
@@ -120,6 +113,4 @@
         ],
         [],
     )
-
-
 ]

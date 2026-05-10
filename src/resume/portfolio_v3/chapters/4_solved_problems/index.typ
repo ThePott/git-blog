@@ -4,8 +4,8 @@
 #import "./3_performance/index.typ": performance
 
 #let solved_problems = [
-  #cover
-  #easy_interface
-  #bottle_neck
-  #performance
+    #cover
+    #easy_interface
+    #bottle_neck
+    #performance
 ]
