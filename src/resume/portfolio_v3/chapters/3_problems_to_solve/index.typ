@@ -1,6 +1,9 @@
 #import "../../components/rem/index.typ": rem
 #import "../../components/title-section/index.typ": title-section
 #import "../../components/two-column-section/index.typ": two-column-section
+#import "./diagram_1_problem_of_math_school/index.typ": diagram_1_problem_of_math_school
+#import "./diagram_2_problem_of_google_sheet_system/index.typ": diagram_2_problem_of_google_sheet_system
+#import "./diagram_3_problem_of_client/index.typ": diagram_3_problem_of_client
 
 #let problems_to_solve = [
     #pagebreak()
@@ -44,7 +47,9 @@
                 - 학생이 오답 복습을 했는지 확인할 방법이 없음
                 - 복습 대신 새 문제집만 풀리고 학생은 틀리는 문제는 계속 틀림
         ],
-        [],
+        [
+            #diagram_1_problem_of_math_school
+        ],
     )
 
     #pagebreak()
@@ -61,7 +66,9 @@
                 - 학생들이 개별로 오답체크, 진도표에 완료 표시 -> 강사가 동기화
                 - 동기화에 한 학생당 5분, 한 수업당 50~100분 소요
         ],
-        [],
+        [
+            #diagram_2_problem_of_google_sheet_system
+        ],
     )
 
     #pagebreak()
@@ -77,7 +84,9 @@
                     - 고객(원장)은 강의에만 집중 희망
                     - 스스템 운용은 아르바이트생에게 위임 계획
         ],
-        [],
+        [
+            #diagram_3_problem_of_client
+        ],
     )
 ]
 
