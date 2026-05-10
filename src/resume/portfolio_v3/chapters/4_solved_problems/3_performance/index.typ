@@ -6,7 +6,7 @@
 #let performance = [
     #pagebreak()
     #title-section(
-        (level: 1, size: "sm", title: "Arbor The Tree로 해결한 과제"),
+        (level: 1, size: "md", title: "Arbor The Tree로 해결한 과제"),
         (level: 2, size: "lg", title: "3. 성능 최적화"),
     )
 
@@ -25,7 +25,7 @@
     #pagebreak()
     #title-section(
         (level: 1, size: "sm", title: "Arbor The Tree로 해결한 과제 3. 성능 최적화"),
-        (level: 2, size: "sm", title: "a. 서버 사이드 PDF 생성"),
+        (level: 2, size: "md", title: "a. 서버 사이드 PDF 생성"),
         (level: 3, size: "lg", title: "PDF 생성 방법과 그 문제"),
     )
 
@@ -45,9 +45,10 @@
     #pagebreak()
     #title-section(
         (level: 1, size: "sm", title: "Arbor The Tree로 해결한 과제 3. 성능 최적화"),
-        (level: 2, size: "sm", title: "a. 서버 사이드 PDF 생성"),
+        (level: 2, size: "md", title: "a. 서버 사이드 PDF 생성"),
         (level: 3, size: "lg", title: "문제의 본질 파악과 그 해결"),
     )
+
     - 문제의 본질: PDF는 문서다
         - 브라우저와도, html과도 무관하다
 
@@ -66,7 +67,7 @@
     #pagebreak()
     #title-section(
         (level: 1, size: "sm", title: "Arbor The Tree로 해결한 과제 3. 성능 최적화"),
-        (level: 2, size: "sm", title: "a. 서버 사이드 PDF 생성"),
+        (level: 2, size: "md", title: "a. 서버 사이드 PDF 생성"),
         (level: 3, size: "lg", title: "문제의 본질 파악과 그 해결"),
     )
 
@@ -88,9 +89,10 @@
     #pagebreak()
     #title-section(
         (level: 1, size: "sm", title: "Arbor The Tree로 해결한 과제 3. 성능 최적화"),
-        (level: 2, size: "sm", title: "a. 서버 사이드 PDF 생성"),
+        (level: 2, size: "md", title: "a. 서버 사이드 PDF 생성"),
         (level: 3, size: "lg", title: "해결: PostgreSQL DB on Railway"),
     )
+
     - DB 서버를 PostgreSQL로 Railway에 직접 배포
         - Railway는 상시 가동 인스턴스로 cold start 없음
     - API 서버와 DB 서버의 network latency 최소화

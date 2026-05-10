@@ -4,7 +4,7 @@
 #let cover = [
     #pagebreak()
     #title-section(
-        (level: 1, size: "sm", title: "Arbor The Tree 진도 관리 시스템으로"),
+        (level: 1, size: "md", title: "Arbor The Tree 진도 관리 시스템으로"),
         (level: 1, size: "lg", title: "해결한 과제"),
     )
 

@@ -3,7 +3,7 @@
 
 #let additional_info = [
     #pagebreak()
-    #title-section((level: 1, size: "sm", title: "Arbor The Tree"), (level: 2, size: "lg", title: "이용 안내"))
+    #title-section((level: 1, size: "md", title: "Arbor The Tree"), (level: 2, size: "lg", title: "이용 안내"))
 
     - 링크
         - https://arbor-the-tree-production.up.railway.app/
@@ -14,6 +14,7 @@
         - #link(
                 "https://arbor-the-tree-production.up.railway.app/test/pdf",
             )[pdf 생성 성능 비교 페이지]
+
     - 테스트 계정
     #table(
         columns: 3,

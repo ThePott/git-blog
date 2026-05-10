@@ -4,19 +4,18 @@
 
 #let table_of_content = [
     #pagebreak()
-    = Arbor The Tree 진도 관리 시스템으로
-    #v(rem(2))
+    #title-section((level: 1, size: "xl", title: "Arbor The Tree 진도 관리 시스템으로"))
+    #v(rem(4))
+
     #two-column-section(
         [
-            == 해결하려고 한 문제
-
+            #title-section((level: 2, size: "lg", title: "해결하려고 한 문제"))
             1. 입시학원의 문제
             2. 구글 시트 + 파이썬 시스템의 문제
             3. 고객의 요구사항
         ],
         [
-            == 해결한 과제
-
+            #title-section((level: 2, size: "lg", title: "해결한 과제"))
             1. 쉬운 사용법
                 - 칸반 진도표
                 - 그리드 인풋

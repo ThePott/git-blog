@@ -5,10 +5,9 @@
 #let easy_interface = [
     #pagebreak()
     #title-section(
-        (level: 1, size: "sm", title: "Arbor The Tree 진도 관리 시스템으로 해결한 과제"),
+        (level: 1, size: "md", title: "Arbor The Tree 진도 관리 시스템으로 해결한 과제"),
         (level: 1, size: "lg", title: "1. 쉬운 사용법"),
     )
-
 
     #override-enum-numbering(numbering: "a.")[
         1. 칸반 진도표
@@ -26,7 +25,7 @@
     #pagebreak()
     #title-section(
         (level: 1, size: "sm", title: "Arbor The Tree로 해결한 과제 1. 쉬운 사용법"),
-        (level: 1, size: "sm", title: "a. 칸반 진도표"),
+        (level: 1, size: "md", title: "a. 칸반 진도표"),
         (level: 3, size: "lg", title: "기존 진도표의 문제"),
     )
 
@@ -43,9 +42,10 @@
     #pagebreak()
     #title-section(
         (level: 1, size: "sm", title: "Arbor The Tree로 해결한 과제 1. 쉬운 사용법"),
-        (level: 1, size: "sm", title: "a. 칸반 진도표"),
+        (level: 1, size: "md", title: "a. 칸반 진도표"),
         (level: 3, size: "lg", title: "기존 진도표의 문제의 해결책"),
     )
+
     - 열(column)별 분리 스크롤
         - 문제집별 스크롤 칸반 보기
     - 드롭다운에서 묶음 상태 설정 (숙제, 오늘, 해제)
@@ -54,9 +54,10 @@
     #pagebreak()
     #title-section(
         (level: 1, size: "sm", title: "Arbor The Tree로 해결한 과제 1. 쉬운 사용법"),
-        (level: 1, size: "sm", title: "a. 칸반 진도표"),
+        (level: 1, size: "md", title: "a. 칸반 진도표"),
         (level: 3, size: "lg", title: "Troubleshooting: 드롭다운이 스크롤바에 잘림"),
     )
+
     - 현상 관찰
         - 열 컴포넌트의 자식으로 들어간 드롭다운이 스크롤바에 잘림
 
@@ -68,7 +69,7 @@
     #pagebreak()
     #title-section(
         (level: 1, size: "sm", title: "Arbor The Tree로 해결한 과제 1. 쉬운 사용법"),
-        (level: 1, size: "sm", title: "b. 그리드 인풋"),
+        (level: 1, size: "md", title: "b. 그리드 인풋"),
         (level: 3, size: "lg", title: "기존 문제집 등록 과정과 그 문제"),
     )
 
@@ -86,7 +87,7 @@
     #pagebreak()
     #title-section(
         (level: 1, size: "sm", title: "Arbor The Tree로 해결한 과제 1. 쉬운 사용법"),
-        (level: 1, size: "sm", title: "b. 그리드 인풋"),
+        (level: 1, size: "md", title: "b. 그리드 인풋"),
         (level: 3, size: "lg", title: "후보 기술 스택"),
     )
 
@@ -103,7 +104,7 @@
     #pagebreak()
     #title-section(
         (level: 1, size: "sm", title: "Arbor The Tree로 해결한 과제 1. 쉬운 사용법"),
-        (level: 1, size: "sm", title: "b. 그리드 인풋"),
+        (level: 1, size: "md", title: "b. 그리드 인풋"),
         (level: 3, size: "lg", title: "문제의 본질"),
     )
 
@@ -119,7 +120,7 @@
     #pagebreak()
     #title-section(
         (level: 1, size: "sm", title: "Arbor The Tree로 해결한 과제 1. 쉬운 사용법"),
-        (level: 1, size: "sm", title: "b. 그리드 인풋"),
+        (level: 1, size: "md", title: "b. 그리드 인풋"),
         (level: 3, size: "lg", title: "Troubleshooting: 유효성 검사 성능 개선"),
     )
 
@@ -136,9 +137,10 @@
     #pagebreak()
     #title-section(
         (level: 1, size: "sm", title: "Arbor The Tree로 해결한 과제 1. 쉬운 사용법"),
-        (level: 1, size: "sm", title: "b. 그리드 인풋"),
+        (level: 1, size: "md", title: "b. 그리드 인풋"),
         (level: 3, size: "lg", title: "Troubleshooting: 키보드 내비게이션"),
     )
+
     - 문제 발생: 구글 시트보다 조악한 키도드 내비게이션
         - 모든 셀은 `<input />`일 뿐이라 키보드 이동은 tab만 지원
         - 방향키로 이동 불가
