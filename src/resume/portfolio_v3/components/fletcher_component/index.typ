@@ -1,7 +1,7 @@
 #import "@preview/fletcher:0.5.8" as fletcher: diagram as fletcher_diagram, edge, node
 #import "../rem/index.typ": rem
 
-#let arrow(a, b, label, paint, ..args) = {
+#let arrow(a, b, label: "", paint: black, ..args) = {
     paint = paint.darken(25%)
     if (label != "") {
         edge(a, b, text(paint, label), "-|>", stroke: paint, label-side: center, ..args)
