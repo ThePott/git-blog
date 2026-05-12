@@ -1,3 +1,7 @@
 #let diagram_1_problem_of_original_progress = [
-    diagram_1_problem_of_original_progress
+    - 스크린샷: 구글 시트 진도표 과목 세 개 있는 것 인쇄 버전
+        - 말풍선: 너무 작은 글씨
+        - 말풍선: 당일 수업과 관계 없는 부분 많음
+    - 스크린샷: 구글 시트 진도표 조건부 포매팅 열고
+        - 말풍선: 조건부 포매팅 적용 범위 깨뜨리지 않아야
 ]

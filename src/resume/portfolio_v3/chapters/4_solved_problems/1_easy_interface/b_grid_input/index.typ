@@ -37,15 +37,15 @@
     )
     #two-column-section(
         [
-            - 기존의 작업 환경인 구글 시트와 유사한 UI 제작하려 함
-                - AG Grid (부분 유료, 1년 999 달러)
-                    - 다중 선택, formula는 유료 기능
-                - Jspreadsheet CE (무료)
-                    - 바닐라 JavaScript 라이브러리
-                    - 선언적으로 컴포넌트 생성 삭제가 불가능
-                - TanStack Table (무료)
-                    - Headless UI Library
-                    - 모든 셀, 행, 열의 데이터에 언제든 접근 가능
+            - 기존의 작업 환경인 구글 시트와 유사한 UI 필요
+            - AG Grid (부분 유료, 1년 999 달러)
+                - 다중 선택, formula는 유료 기능
+            - Jspreadsheet CE (무료)
+                - 바닐라 JavaScript 라이브러리
+                - 선언적으로 컴포넌트 생성 삭제가 불가능
+            - TanStack Table (무료)
+                - Headless UI Library
+                - 모든 셀, 행, 열의 데이터에 언제든 접근 가능
         ],
         [
             #diagram_2_library_candidats
@@ -102,7 +102,7 @@
     )
     #two-column-section(
         [
-            - 문제 발생: 구글 시트보다 조악한 키도드 내비게이션
+            - 문제 발생: 구글 시트보다 조악한 키보드 내비게이션
                 - 모든 셀은 `<input />`일 뿐이라 키보드 이동은 tab만 지원
                 - 방향키로 이동 불가
                 - 엔터로 아래 셀 이동 불가

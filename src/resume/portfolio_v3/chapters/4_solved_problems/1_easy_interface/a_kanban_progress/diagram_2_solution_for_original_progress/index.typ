@@ -1,3 +1,7 @@
 #let diagram_2_solution_for_original_progress = [
-    diagram_2_solution_for_original_progress
+    - 스크린샷: 문제집별 진도표, 드롭다운 열기
+        - 말풍선: 문제집별 스크롤
+        - 말풍선: 드롭다운으로 묶음 상태 설정
+    - 스크린샷: 요약 진도표
+        - 당일 수업에 필요한 부분만 요약 보기
 ]
