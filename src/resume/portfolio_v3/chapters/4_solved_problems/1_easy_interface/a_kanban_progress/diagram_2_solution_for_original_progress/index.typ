@@ -8,20 +8,29 @@
     // - 스크린샷: 요약 진도표
     //     - 당일 수업에 필요한 부분만 요약 보기
 
-    #figure(caption: "문제집 별 스크롤 및 드롭다운으로 상태 변경")[
-        #shadowed-round-box(inset: 0)[
-            #image("./images/progress-1.png")
+    #shadowed-round-box(inset: 0)[
+        #image("./images/progress-1.png")
+
+        #place(top + left, dx: rem(2), dy: rem(8))[
+            #box(fill: white, inset: (x: rem(1), y: rem(0.5)))[
+                #text("드롭다운으로\n묶음 상태 선택")
+            ]
         ]
-        #v(rem(1))
+
+        #place(top + left, dx: rem(21), dy: rem(12))[
+            #box(fill: white, inset: (x: rem(1), y: rem(0.5)))[
+                #text("열별 스크롤")
+            ]
+        ]
     ]
 
     #v(rem(2))
-    #figure(caption: [
-        당일 수업 요약 보기
-    ])[
-        #shadowed-round-box(inset: 0)[
-            #image("./images/progress-2.png")
+    #shadowed-round-box(inset: 0)[
+        #image("./images/progress-2.png")
+        #place(top + left, dx: rem(4), dy: rem(0))[
+            #box(fill: white, inset: (x: rem(1), y: rem(0.5)))[
+                요약: 전 숙제, 오늘, 새 숙제만 필터
+            ]
         ]
-        #v(rem(1))
     ]
 ]
