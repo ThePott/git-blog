@@ -41,8 +41,8 @@
             - 문제의 본질: PDF는 문서다
                 - 브라우저와도, html과도 무관하다
             - 해결
-                1. 오답 과제 pdf 생성 request -> 오답 과제 내의 문제 쿼리
-                2. Typst template 생성 -> PDF로 컴파일
+                1. 오답 과제 pdf 생성 request $arrow.r$ 오답 과제 내의 문제 쿼리
+                2. Typst template 생성 $arrow.r$ PDF로 컴파일
                 3. respond with PDF
             - 성과(ReactPDF 대비)
                 - 8쪽 생성 시간 4.7% 단축

@@ -2,6 +2,7 @@
 
 // unified depth counter for both enum and list
 #let list_settings(content) = {
+    show list: set list(marker: ("•", "◦", "▪"))
     show enum: set enum(numbering: "1. a. i.")
 
     // Helper: get style based on depth
