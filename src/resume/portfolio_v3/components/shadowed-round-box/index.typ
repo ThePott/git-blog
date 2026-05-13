@@ -1,7 +1,7 @@
 #import "@preview/shadowed:0.3.0": shadow
 #import "../rem/index.typ": rem
 
-#let shadowed-round-box(content) = [
+#let shadowed-round-box(inset: 2, content) = [
     #shadow(blur: 12pt, fill: rgb(89, 85, 101, 50%), radius: 12pt, dy: 12pt, spread: -6pt)[
         #shadow(blur: 24pt, fill: rgb(89, 85, 101, 25%), radius: 24pt, dy: 24pt, spread: -12pt)[
             #box(
@@ -9,7 +9,7 @@
                 radius: rem(1),
                 clip: true,
                 fill: white,
-                inset: rem(2),
+                inset: rem(inset),
             )[
                 #align(center)[
                     #content
