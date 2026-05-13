@@ -1,5 +1,8 @@
+#import "./validation_performance_comparision_chart/index.typ": validation_performance_comparision_chart
+#import "../../../../../components/shadowed-round-box/index.typ": shadowed-round-box
+
 #let diagram_4_trobleshoot_validation = [
-    - 그래프
-        - 가로축 virtual scroll 적용 여부
-        - update time
+    #shadowed-round-box[
+        #validation_performance_comparision_chart
+    ]
 ]

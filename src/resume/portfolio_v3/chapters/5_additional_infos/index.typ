@@ -21,6 +21,7 @@
         stroke: none,
         inset: (x: rem(2)),
         [*계정*], [*ID*], [*Password*],
+        table.hline(),
         [원장], [`test12@test.test`], [`test1234!@#$`],
         [실장], [`test13@test.test`], [`test1234!@#$`],
         [학생], [`test14@test.test`], [`test1234!@#$`],

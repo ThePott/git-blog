@@ -22,9 +22,9 @@
 #let dotted_line(a, b, label: "", paint: black, ..args) = {
     paint = paint.darken(25%)
     if (label != "") {
-        edge(a, b, text(paint, label), "..", stroke: paint, label-side: center, ..args)
+        edge(a, b, text(paint, label), "--", stroke: paint, label-side: center, ..args)
     } else {
-        edge(a, b, "..", stroke: paint, label-side: center, ..args)
+        edge(a, b, "--", stroke: paint, label-side: center, ..args)
     }
 }
 

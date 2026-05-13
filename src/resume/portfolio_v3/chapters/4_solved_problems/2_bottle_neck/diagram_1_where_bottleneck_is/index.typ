@@ -21,7 +21,7 @@
             edge((1, 1), "r,d", "-|>", [자동 저장], label-pos: 0.2),
             edge((2, 2), (1, 2), "-|>", [완료 여부 갱신]),
             edge((2, 2), "d,d,d,d,l", "-|>", [완료 여부 갱신], label-pos: (4, 0.5), label-side: left),
-            edge((2, 2), (1, 4), "..|>", [수동 입력 불필요], label-pos: 0.5, label-side: center),
+            edge((2, 2), (1, 4), "--|>", [수동 입력 불필요], label-pos: 0.5, label-side: center),
 
             blank_node((0, 4), "강사"),
             white_node((1, 4), "구글 시트에 오답 체크 입력"),
