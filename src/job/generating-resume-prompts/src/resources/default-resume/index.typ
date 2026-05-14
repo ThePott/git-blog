@@ -101,7 +101,6 @@ React, TypeScript, Git, vite, Express, REST API, PostgreSQL, Prisma
 - 커스텀 배포 스크립트: npm install로 설치되지 않는 Typst compiler, font 파일을 Railway 배포 시 자동 설치
 - RESTful API 설계: 프론트엔드와 분리된 #link("https://github.com/ThePott/api-of-arbor-the-tree", "API 서버 구축")
 === Harpooning Tmux 세션 관리자
-
 #dim_text("개인/기타\n2026. 04. ~ 2026. 04.")
 
 #additional_title("어떤 프로젝트든 바로 열고 닫고 이동하기")
@@ -136,7 +135,6 @@ React, TypeScript, Git, vite, Express, REST API, PostgreSQL, Prisma
 
 == 교육
 === 고려대학교
-
 #dim_text("졸업 | 대학교(학사) | 경제학과\n2013. 02. ~ 2020. 02.")
 
 == 자기소개
