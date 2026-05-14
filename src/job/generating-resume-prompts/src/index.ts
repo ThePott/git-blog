@@ -1,6 +1,7 @@
 import { createInterface } from "node:readline"
 import updateTargets from "./actions.update-targets.js"
 import generateKeywordsPrompts from "./actions.generate-keywords-prompts.js"
+import generateResumesPrompts from "./actions.generate-resumes-prompts.js"
 
 const readline = createInterface({
     input: process.stdin,
@@ -17,7 +18,7 @@ const commandToAction: Record<Command, () => void> = {
     exit: () => process.exit(0),
     update: updateTargets,
     keywords: generateKeywordsPrompts,
-    resumes: generateRe,
+    resumes: generateResumesPrompts,
 }
 
 const prompt = () => {

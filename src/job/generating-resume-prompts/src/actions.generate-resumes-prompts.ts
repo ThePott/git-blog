@@ -24,8 +24,8 @@ const makePrompt = (fullName: string): string => {
     - ${__dirname}/resources/*
     - ${__dirname}/generated.keywords/${fullName}.md
     - ${__dirname}/targets/list/${fullName}.md
-- ${resumesDir}/${fullName}.md 에 작성하고 그 이외의 어떤 파일도 수정하지 마.
-- 지원 동기는 주어진 자료를 바탕으로 작성해.
+- ${resumesDir}/${fullName}/ 에 작성하고 그 이외의 어떤 파일도 수정하지 마.
+- 신입이기 때문에 지원 동기가 필요해. 지원 동기는 주어진 자료를 바탕으로 작성해.
 
 ### 형식
 
@@ -43,6 +43,12 @@ const makePrompt = (fullName: string): string => {
         - Strong (XYZ): "Reduced average client onboarding time from 1 day to 1 hour (X & Y) by designing a new training
           module program (Z)".
 - 자기소개를 상단에 5~10줄 가량 적을 것
+
+### 파일 형식
+- 먼저 ${__dirname}/resources/default-resume 의 내용물을 ${resumesDir}/${fullName}/ 에 복사해
+- 만들어져있는 컴포넌트, 페이지 구조는 수정하지 말고 내용물만 수정해
+- default-resume에서 수정한 부분이 있으면 왜 그렇게 수정했는지 주석을 달아
+- 그렇게 index.typ를 만들고 나면 해당 폴더에서 typst compile index.typ 명령어를 실행해
 
 ### 주의사항: 대답 형식
 
