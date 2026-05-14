@@ -1,9 +1,3 @@
-// TODO
-// AI, Google AI Mode
-// {회사명}에 신입 {직무명}로 지원하려고 하는데, 중요 키워드 50개를 코드 블록 안에 마크다운으로 정리해줘
-
-// TODO: targets/list 안에 있는 파일명에서 회사명, 직무명 분리
-
 import * as fs from "fs"
 import * as path from "path"
 
@@ -41,9 +35,3 @@ const generateKeywordsPrompts = () => {
 }
 
 export default generateKeywordsPrompts
-
-// TODO
-// AI, Google AI Mode
-// {회사명}에 신입 {직무명}로 지원하려고 하는데, 중요 키워드 50개를 코드 블록 안에 마크다운으로 정리해줘
-
-// TODO: targets/list 안에 있는 파일명에서 회사명, 직무명 분리
