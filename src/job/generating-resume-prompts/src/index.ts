@@ -1,11 +1,12 @@
 import { createInterface } from "node:readline"
+import updateTargets from "./actions.update-targets.js"
 
 const readline = createInterface({
     input: process.stdin,
     output: process.stdout,
 })
 
-const commandArray = ["help", "exit", ""]
+const commandArray = ["help", "exit", "update"]
 const availableCommands = commandArray.join(", ")
 type Command = (typeof commandArray)[number]
 const commandToAction: Record<Command, () => void> = {
@@ -13,7 +14,7 @@ const commandToAction: Record<Command, () => void> = {
         console.log(`Available commands: ${availableCommands}`)
     },
     exit: () => process.exit(0),
-    test: () => console.log("Generating..."),
+    update: updateTargets,
 }
 
 const prompt = () => {
