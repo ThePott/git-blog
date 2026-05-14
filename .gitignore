@@ -1,2 +1,5 @@
 .DS_Store
 test
+
+**/dist 
+**/node_modules
