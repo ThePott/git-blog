@@ -1,0 +1,1 @@
+토스에 신입 Node_js_Developer__AI로 지원하려고 해. 중요 키워드 50개를 정리해서 /Users/haheungju/Desktop/SRC/DRAGON_WARRIOR/git-blog/src/job/generating-resume-prompts/src/generated.keywords에 토스__Node_js_Developer__AI.md 파일을 만들고 작성해. 만약 해당 파일이 이미 있으면 넘어가.
