@@ -1,0 +1,31 @@
+#import "../../components/title-section/index.typ": title-section
+#import "../../components/rem/index.typ": rem
+#import "../../components/two-column-section/index.typ": two-column-section
+
+#let table_of_content = [
+    #pagebreak()
+    #title-section((level: 1, size: "xl", title: "Arbor The Tree 진도 관리 시스템으로"))
+    #v(rem(4))
+
+    #two-column-section(
+        [
+            #title-section((level: 2, size: "lg", title: "해결하려고 한 문제"))
+            1. 입시학원의 문제
+            2. 구글 시트 + 파이썬 시스템의 문제
+            3. 고객의 요구사항
+        ],
+        [
+            #title-section((level: 2, size: "lg", title: "해결한 과제"))
+            1. 쉬운 사용법
+                - 칸반 진도표
+                - 그리드 인풋
+            2. 병목 현상 해결
+                - 진도표와의 동기화
+            3. 성능 최적화
+                - PDF 성능
+                - 서버 응답시간 단축
+        ],
+    )
+
+
+]
