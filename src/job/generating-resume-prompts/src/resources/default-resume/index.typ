@@ -2,6 +2,7 @@
 #import "./components/dim_text/index.typ": dim_text
 #import "./components/rem/index.typ": rem
 #import "./components/hr/index.typ": hr
+#import "./components/shadowed_round_box/index.typ": shadowed_round_box
 
 #show: page_setting
 
@@ -23,16 +24,8 @@
     ],
     [
         // Photo placeholder
-        #rect(
-            width: 100pt,
-            height: 120pt,
-            fill: rgb("#f0f0f0"),
-            stroke: 0.5pt + rgb("#e0e0e0"),
-            radius: 4pt,
-        )[
-            #align(center + horizon)[
-                #text(size: 9pt, fill: gray)[Photo]
-            ]
+        #shadowed_round_box[
+            #image("assets/nusilite.jpg")
         ]
     ],
 )
