@@ -7,7 +7,7 @@ const readline = createInterface({
     output: process.stdout,
 })
 
-const commandArray = ["help", "exit", "update", "keywords"]
+const commandArray = ["help", "exit", "update", "keywords", "resumes"]
 const availableCommands = commandArray.join(", ")
 type Command = (typeof commandArray)[number]
 const commandToAction: Record<Command, () => void> = {
@@ -17,6 +17,7 @@ const commandToAction: Record<Command, () => void> = {
     exit: () => process.exit(0),
     update: updateTargets,
     keywords: generateKeywordsPrompts,
+    resumes: generateRe,
 }
 
 const prompt = () => {

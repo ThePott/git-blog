@@ -52,7 +52,7 @@ const makePrompt = (fullName: string): string => {
 `
 }
 
-const generateKeywordsPrompts = () => {
+const generateResumesPrompts = () => {
     const targetListDir = path.resolve(__dirname, "targets/list")
     const targetListFiles = fs.readdirSync(targetListDir).filter((f) => f.endsWith(".md"))
     const fullNameArray = targetListFiles.map((f) => f.replace(".md", ""))
@@ -67,7 +67,7 @@ const generateKeywordsPrompts = () => {
         fs.writeFileSync(targetPath, prompts)
     })
 
-    console.log("created resume prompts")
+    console.log("created resumes prompts")
 }
 
-export default generateKeywordsPrompts
+export default generateResumesPrompts
