@@ -104,8 +104,9 @@ React, TypeScript, TanStack Query, TanStack Router, Zustand, Vite, Git, Express,
 #dim_text("경제학과 | 졸업\n2013. 02. ~ 2020. 02.")
 
 === 넥스트러너스 오즈코딩스쿨
-#dim_text("프론트엔드 부트캠프\n2024. 08. ~ 2025. 01.")
-- React, Node.js, PostgreSQL 학습
+#dim_text("프론트엔드 부트캠프\n2025. 05. ~ 2025. 11.")
+- React, Node.js, PostgreSQL 학습 및 심화반 수강
+- 최우수 수료
 
 == 포트폴리오
 
