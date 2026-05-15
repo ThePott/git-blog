@@ -8,6 +8,7 @@
     - 링크
         - https://arbor-the-tree-production.up.railway.app/
         - https://github.com/ThePott/arbor-the-tree
+        - https://github.com/ThePott/api-of-arbor-the-tree
         - #link(
                 "https://arbor-the-tree-production.up.railway.app/test/login",
             )[테스트 계정 로그인 페이지]
