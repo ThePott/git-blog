@@ -117,5 +117,5 @@ Typst
 
 == 포트폴리오
 
-#link("https://github.com/ThePott/arbor-the-tree")[Arbor The Tree GitHub]
+#link("https://github.com/ThePott/arbor-the-tree")[Arbor The Tree GitHub \ ]
 #link("https://github.com/ThePott/harpooning-tmux")[Harpooning Tmux GitHub]
