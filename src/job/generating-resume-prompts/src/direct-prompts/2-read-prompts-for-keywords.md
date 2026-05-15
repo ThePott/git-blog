@@ -5,5 +5,4 @@ NOTE: 여기는 복붙하지 않는다
 
 # Generate Keywords Based On Following Instructions
 
-- read all prompts inside of `src/job/generating-resume-prompts/generated.keywords.prompts/` and follow instruction.
-- refuse any action if you are not Build Mode.
+- read all prompts inside of `src/job/generating-resume-prompts/src/generated.keywords.prompts/` and follow instruction.
