@@ -1,14 +1,14 @@
 import { createInterface } from "node:readline"
-import updateTargets from "./actions.update-targets.js"
 import generateKeywordsPrompts from "./actions.generate-keywords-prompts.js"
 import generateResumesPrompts from "./actions.generate-resumes-prompts.js"
+import generateQnaPrompts from "./action.generate-qna.js"
 
 const readline = createInterface({
     input: process.stdin,
     output: process.stdout,
 })
 
-const commandArray = ["help", "exit", "update", "keywords", "resumes"]
+const commandArray = ["help", "exit", "keywords", "resumes", "qna"]
 const availableCommands = commandArray.join(", ")
 type Command = (typeof commandArray)[number]
 const commandToAction: Record<Command, () => void> = {
@@ -16,9 +16,9 @@ const commandToAction: Record<Command, () => void> = {
         console.log(`Available commands: ${availableCommands}`)
     },
     exit: () => process.exit(0),
-    update: updateTargets,
     keywords: generateKeywordsPrompts,
     resumes: generateResumesPrompts,
+    qna: generateQnaPrompts,
 }
 
 const prompt = () => {
