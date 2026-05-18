@@ -1,4 +1,3 @@
-
 #import "./components/page_settings/index.typ": page_setting
 #import "./components/dim_text/index.typ": dim_text
 #import "./components/rem/index.typ": rem
@@ -81,7 +80,7 @@ React, TypeScript, TanStack Query, Zustand, Vite, Express, PostgreSQL, Prisma, G
 #additional_title("개발 환경 생산성 도구")
 
 ==== 해결한 문제
-- 새 프로젝트를 tmux 세션으로 등록하는 시간: 20초 → 2초 (10배 향상)
+- 새 프로젝트를 tmux 세션으로 등록하는 시간: 25.3초 → 0.8초 (31배 향상)
 - fzf로 .git 폴더 있는 디렉토리 검색 → 선택 시 새 세션으로 추가
 - 즐겨찾기 목록 순서대로 숫자 단축키(0\~9)로 즉시 이동
 

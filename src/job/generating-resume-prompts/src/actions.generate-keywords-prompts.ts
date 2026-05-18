@@ -18,7 +18,7 @@ const makePrompt = (fullName: string): string => {
 }
 
 const generateKeywordsPrompts = () => {
-    const targetListDir = path.resolve(__dirname, "targets/list")
+    const targetListDir = path.resolve(__dirname, "targets")
     const targetListFiles = fs.readdirSync(targetListDir).filter((f) => f.endsWith(".md"))
     const fullNameArray = targetListFiles.map((f) => f.replace(".md", ""))
 
