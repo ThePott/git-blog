@@ -23,7 +23,7 @@
         #place(center, dy: 40%)[
             #stack(dir: ttb)[
                 #v(rem(0))
-                #text(size: rem(3), weight: "bold", "하흥주: Frontend Developer")
+                #text(size: rem(3), weight: "bold", "하흥주: Frontend Engineer")
                 #v(rem(1.5))
                 #text(size: rem(1.5), weight: "semibold", "트렌드보다 본질, 복잡함보다 명료함")
                 #v(rem(1))

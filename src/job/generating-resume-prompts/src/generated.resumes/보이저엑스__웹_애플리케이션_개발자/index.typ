@@ -1,8 +1,8 @@
-#import "/src/job/general/resume/resume_v2/components/page_settings/index.typ": page_setting
-#import "/src/job/general/resume/resume_v2/components/dim_text/index.typ": dim_text
-#import "/src/job/general/resume/resume_v2/components/rem/index.typ": rem
-#import "/src/job/general/resume/resume_v2/components/hr/index.typ": hr
-#import "/src/job/general/resume/resume_v2/components/shadowed_round_box/index.typ": shadowed_round_box
+#import "./components/page_settings/index.typ": page_setting
+#import "./components/dim_text/index.typ": dim_text
+#import "./components/rem/index.typ": rem
+#import "./components/hr/index.typ": hr
+#import "./components/shadowed_round_box/index.typ": shadowed_round_box
 
 #show: page_setting
 
@@ -15,7 +15,7 @@
     [
         = 하흥주
         #v(rem(0.5))
-        #additional_title("본질과 명료함을 추구하는 웹 애플리케이션 개발자")
+        #additional_title("문제의 본질을 파악하는 웹 개발자")
         #v(rem(2))
         #dim_text[nusilite\@gmail.com]
         #v(rem(1))
@@ -23,27 +23,32 @@
     ],
     [
         #shadowed_round_box[
-            #image("/src/job/general/resume/resume_v2/assets/nusilite.jpg")
+            #image("assets/nusilite.jpg")
         ]
     ],
 )
 
 == 자기소개
 
-*본질과 명료함을 추구합니다*
+*보이저엑스 지원 동기*
 
-입시 학원에서 강사로 4년 6개월간 일하며 두 가지 문제를 발견했습니다. 강사 기억에 의존한 진도 추적, 학생에게만 맡기는
-오답 복습이었습니다. 이를 해결하고자 파이썬과 구글 시트로 진도 관리 시스템을 만들었고, 이후 웹앱으로 발전시켰습니다.
+인공지능 소프트웨어로 더 즐겁고 편리한 삶을 만든다는 보이저엑스 비전에 공감합니다. 본질과 명료함을 추구하는 저의 개발
+철학과 딥러닝에 대한 믿음, 새로운 제품에 대한 모험심이 잘 맞다고 느꼈습니다.
 
-웹앱 개발 과정에서 스프레드시트 라이브러리 선택, PDF 생성 위치, DB 응답 속도 등 여러 기술적 문제를 마주했습니다. 매번
-"문제의 본질이 무엇인가"를 물었고, 가장 단순한 해결책을 선택했습니다. 테이블 형식이 필요한 것이지 스프레드시트가 필요한
-것이 아니었고, PDF는 브라우저와 무관한 문서였습니다.
+학원 강사로서 문제의 본질을 파악하여 학생마다 다른 이해의 병목 지점을 찾고, 단순한 설명으로 문제를 해결했던 경험이
+있습니다. 동일한 접근법을 웹 개발에 적용하여, Arbor The Tree 프로젝트에서 스프레드시트의 본질은 테이블이며, PDF의 본질은
+브라우저와 무관한 문서임을 파악하고 단순한 해결책을 구현했습니다.
 
-침착하게 본질을 파악하겠습니다. 문제를 정확히 정의하고 단순한 해결책을 만드는 개발자가 되고자 합니다.
+*문제 해결 접근법*
+
+React와 TypeScript로 웹앱을 개발하며, 매번 "이 문제의 근본은 무엇인가"를 물었습니다. 스프레드시트 라이브러리 대신
+TanStack Table을, 클라이언트 PDF 생성 대신 서버 사이드 Typst를 선택했습니다. 동영상 편집기 Vrew에서 FFmpeg, WebGL,
+WebAudio 같은 기술이 어떻게 활용되는지 기대됩니다. 저의 본질 파악 능력과 단순한 해결책을 만드는 철학이 보이저엑스에서
+가치를 만들 수 있다고 믿습니다.
 
 == 기술 스택
 
-React, TypeScript, TanStack Query, Zustand, Vite, Express, PostgreSQL, Prisma, Git
+React, TypeScript, TanStack Query, TanStack Router, Zustand, Vite, Express, PostgreSQL, Prisma, Git, AWS
 
 == 프로젝트
 
@@ -60,9 +65,11 @@ React, TypeScript, TanStack Query, Zustand, Vite, Express, PostgreSQL, Prisma, G
 
 ==== 기술적 해결
 - 스프레드시트 → TanStack Table: 필요한 건 테이블 형식이지 스프레드시트가 아님을 파악, 자동완성/유효성 검사 직접 구현
-- 드롭다운 잘림 문제: createPortal로 document.body에 렌더링, Floating UI로 위치 계산
+- 드롭다운 잘림 문제: createPortal로 document.body에 렌더링, Floating UI로 위치 계산 (Reflow 이해)
 - 다층 구조 가상 스크롤: book → topic → step → question 계층을 줄 단위로 평탄화 후 가상화
 - 커스텀 배포 스크립트: npm install로 설치되지 않는 Typst compiler, 한글 폰트를 Railway 배포 시 자동 설치
+- async I/O: Express.js에서 비동기 처리, Railway + PostgreSQL 동일 private network로 지연 시간 최소화
+- C++ 이해를 위한 저수준 접근: Typst 컴파일러를 bash 스크립트로 직접 설치, 폰트 경로 직접 설정
 
 ==== 주요 성과
 - 서버 응답 속도 22배 향상 (7초 → 315ms)

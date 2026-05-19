@@ -15,7 +15,7 @@
     [
         = 하흥주
         #v(rem(0.5))
-        #additional_title("본질과 명료함을 추구하는 프론트엔드 개발자")
+        #additional_title("본질과 명료함을 추구하는 프론트엔드 엔지니어")
         #v(rem(2))
         #dim_text[nusilite\@gmail.com]
         #v(rem(1))
