@@ -1,8 +1,8 @@
-#import "./components/page_settings/index.typ": page_setting
-#import "./components/dim_text/index.typ": dim_text
-#import "./components/rem/index.typ": rem
-#import "./components/hr/index.typ": hr
-#import "./components/shadowed_round_box/index.typ": shadowed_round_box
+#import "/src/job/general/resume/resume_v2/components/page_settings/index.typ": page_setting
+#import "/src/job/general/resume/resume_v2/components/dim_text/index.typ": dim_text
+#import "/src/job/general/resume/resume_v2/components/rem/index.typ": rem
+#import "/src/job/general/resume/resume_v2/components/hr/index.typ": hr
+#import "/src/job/general/resume/resume_v2/components/shadowed_round_box/index.typ": shadowed_round_box
 
 #show: page_setting
 
@@ -15,7 +15,7 @@
     [
         = 하흥주
         #v(rem(0.5))
-        #additional_title("본질과 명료함을 추구하는 프론트엔드 개발자")
+        #additional_title("본질과 명료함을 추구하는 소프트웨어 엔지니어")
         #v(rem(2))
         #dim_text[nusilite\@gmail.com]
         #v(rem(1))
@@ -23,7 +23,7 @@
     ],
     [
         #shadowed_round_box[
-            #image("assets/nusilite.jpg")
+            #image("/src/job/general/resume/resume_v2/assets/nusilite.jpg")
         ]
     ],
 )
@@ -45,7 +45,8 @@
 경우가 많습니다. 모든 걸 리액트로 해결하려는 경우처럼 말입니다. 본질을 파악하면 다시 한참 밑으로 내려가 최소한만의
 자원을 사용할 수 있고 이는 성능 향상으로 이어집니다. 저는 이를 바탕으로 PDF 생성 성능을 약 60 퍼센트 개선하였습니다.
 
-문제의 본질을 파헤치고 해결하여, 저와 팀원은 더더욱 탄탄해질 것입니다.
+채널톡은 기초의 중요성을 그 어떤 기업보다 강조합니다. 기초를 중시하는 채널톡에서 기본과 본질에 집중하는, 채널톡의
+문제들을 진단하고 해결하며 채널톡과 제가 더더욱 탄탄해지게 할 것입니다.
 
 == 기술 스택
 
@@ -53,7 +54,7 @@ React, TypeScript, TanStack Query, Zustand, Vite, Express, PostgreSQL, Prisma, G
 
 == 프로젝트
 
-=== Arbor The Tree: 진도 관리 시스템
+=== Arbor The Tree 진도 관리 시스템
 #dim_text("개인 프로젝트 (외주)\n2025. 11. ~ 2026. 04.")
 
 #additional_title("복잡한 학원 운영을 단순한 시스템으로")

@@ -1,8 +1,8 @@
-#import "./components/page_settings/index.typ": page_setting
-#import "./components/dim_text/index.typ": dim_text
-#import "./components/rem/index.typ": rem
-#import "./components/hr/index.typ": hr
-#import "./components/shadowed_round_box/index.typ": shadowed_round_box
+#import "/src/job/general/resume/resume_v2/components/page_settings/index.typ": page_setting
+#import "/src/job/general/resume/resume_v2/components/dim_text/index.typ": dim_text
+#import "/src/job/general/resume/resume_v2/components/rem/index.typ": rem
+#import "/src/job/general/resume/resume_v2/components/hr/index.typ": hr
+#import "/src/job/general/resume/resume_v2/components/shadowed_round_box/index.typ": shadowed_round_box
 
 #show: page_setting
 
@@ -23,7 +23,7 @@
     ],
     [
         #shadowed_round_box[
-            #image("assets/nusilite.jpg")
+            #image("/src/job/general/resume/resume_v2/assets/nusilite.jpg")
         ]
     ],
 )
@@ -32,20 +32,14 @@
 
 *본질과 명료함을 추구합니다*
 
-문제들에는 공통점이 있습니다. 각각의 문제들을 개별적으로 해결하는 건 미래의 문제를 해결하는 데에 큰 도움 안 됩니다. 모든
-문제는 독자적이고 새롭습니다. 어떨지 모르는 미래의 문제를 해결하기 위해선 보다 문제의 근원, 원형(Archetype)을 생각해야
-합니다.
+입시 학원에서 강사로 4년 6개월간 일하며 두 가지 문제를 발견했습니다. 강사 기억에 의존한 진도 추적, 학생에게만 맡기는
+오답 복습이었습니다. 이를 해결하고자 파이썬과 구글 시트로 진도 관리 시스템을 만들었고, 이후 웹앱으로 발전시켰습니다.
 
-본질적 문제 해결에는 두 가지 장점이 있습니다. 첫째, 본질적 코드를 재사용하는 패턴을 자연스럽게 사용하게 되어 문제의
-가능성이 해당 코드에만 격리됩니다. 저는 모든 프로젝트를 할 때 공통 컴포넌트를 레이아웃 단계부터 설계합니다. 이로써 코드
-반복을 줄이고 문제의 가능성을 한 지점에 격리합니다. 디자인을 일관되게 적용할 뿐 아니라 문제 발생 시 그 해결 또한 한 번에
-합니다.
+웹앱 개발 과정에서 스프레드시트 라이브러리 선택, PDF 생성 위치, DB 응답 속도 등 여러 기술적 문제를 마주했습니다. 매번
+"문제의 본질이 무엇인가"를 물었고, 가장 단순한 해결책을 선택했습니다. 테이블 형식이 필요한 것이지 스프레드시트가 필요한
+것이 아니었고, PDF는 브라우저와 무관한 문서였습니다.
 
-둘째, 성능을 향상합니다. 표층적인 문제만 해결할 경우, 기존의 거대한 기술 스택을 그대로 사용하기 때문에 성능이 저하되는
-경우가 많습니다. 모든 걸 리액트로 해결하려는 경우처럼 말입니다. 본질을 파악하면 다시 한참 밑으로 내려가 최소한만의
-자원을 사용할 수 있고 이는 성능 향상으로 이어집니다. 저는 이를 바탕으로 PDF 생성 성능을 약 60 퍼센트 개선하였습니다.
-
-문제의 본질을 파헤치고 해결하여, 저와 팀원은 더더욱 탄탄해질 것입니다.
+침착하게 본질을 파악하겠습니다. 문제를 정확히 정의하고 단순한 해결책을 만드는 개발자가 되고자 합니다.
 
 == 기술 스택
 
@@ -53,7 +47,7 @@ React, TypeScript, TanStack Query, Zustand, Vite, Express, PostgreSQL, Prisma, G
 
 == 프로젝트
 
-=== Arbor The Tree: 진도 관리 시스템
+=== Arbor The Tree 진도 관리 시스템
 #dim_text("개인 프로젝트 (외주)\n2025. 11. ~ 2026. 04.")
 
 #additional_title("복잡한 학원 운영을 단순한 시스템으로")
