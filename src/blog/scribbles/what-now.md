@@ -11,14 +11,24 @@
 
 # 해야 하는 것
 
-## zig ui 시도하기
+## first zig app
 
-1. gingerbill 처럼 코딩해서 database 사용하기
-2. cli로 로직 만들기
-3. raylib으로 만들기
+### deploy through homebrew
 
-## clay로 디자인 언어 만들기
+### wasm
 
-1. 레이아웃, 버튼, 라운드 박스 이렇게만
+### dmg
 
 ## 혜영이 오픈 코드 만들기
+
+# 아이디어
+
+## youtube as radio
+
+### cli
+
+- playlist as textfile
+- command to play playlist
+- `ytradio play {path relative to playlist folder}`
+
+## 화장실 물소리 앱
