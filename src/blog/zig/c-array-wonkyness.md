@@ -8,7 +8,7 @@
 
 - https://youtu.be/0CB1mYS5wBc?list=PLnuhp3Xd9PYTt6svyQPyRO_AAuMWGxPzU&t=3978
 
-## sample code
+## wonky c code
 
 ```c
 projectile Projectiles[40]; // NOTE: size of Projectile: 16
